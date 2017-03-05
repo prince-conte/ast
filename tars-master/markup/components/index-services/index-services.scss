@@ -1,0 +1,55 @@
+.index-services {
+	margin-top: 6rem;
+	margin-bottom: 5rem;
+	
+	&__grid {
+		@include grid();
+	}
+
+	
+	&__item {
+		@include grid-columns(1, 5);
+		
+		&:nth-child(1) {
+			text-align: right;
+			padding-right: 4rem;
+		}
+				
+		&:nth-child(2) {
+			text-align: right;
+			padding-right: 3rem;
+		}
+				
+		&:nth-child(3) {
+			text-align: left;
+		}
+						
+		&:nth-child(4) {
+			text-align: right;
+			padding-right: 2rem;
+			
+			img {
+				margin-bottom: 2rem;
+			}
+		}
+								
+		&:nth-child(5) {
+			padding-left: 4rem;
+			
+			.index-services__title {
+				padding-left: 1.5rem;
+			}
+		}
+		
+		img {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	
+	&__title {
+		@include font (1.9rem, 2.4rem);
+		color: #231f20;
+	}
+	
+}

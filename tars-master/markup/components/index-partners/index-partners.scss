@@ -1,0 +1,55 @@
+.index-partners {
+	
+	&__grid {
+		width: calc(100% + 2rem);
+		margin-left: -1rem;
+	}
+	
+	&__item {
+		margin: 0 1rem;
+		outline: none !important; // for slick
+		
+		img {
+			transition: .2s;
+			filter: grayscale(100%); 
+		}
+		
+		&:hover {
+			img {
+				filter: grayscale(0); 
+			}
+		}
+		
+	}
+	
+	.slick-nav {
+		position: absolute;
+		top: 0%;
+		width: 2rem;
+		height: 100%;
+		cursor: pointer;
+		z-index: 9999;
+		background: {
+			position: 50% 50%;
+			size: contain;
+			image: url(../img/general/prev.png);
+			repeat: no-repeat;
+			color: #f7f7f7;
+		}
+		
+		&:hover {
+			background-image: url(../img/general/prev-h.png);
+		}
+	}
+	
+	
+	.slick-prev {
+		left: -1rem;
+	}
+		
+	.slick-next {
+		right: -.5rem;
+		transform: rotate(180deg);
+	}
+	
+}

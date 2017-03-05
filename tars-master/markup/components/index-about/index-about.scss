@@ -1,0 +1,44 @@
+.index-about {
+	padding-top: 6rem;
+	@include background(linear-gradient(#f7f7f7, #dddfe1) left repeat);
+	
+	&__title {
+		@include h2();
+		margin-bottom: 3rem;
+		text-align: left;
+		color: $color-title;
+	}
+	
+	
+	&__content {
+		
+		@include media($breakpoint-desktop) {
+			@include grid();
+		}
+	}
+	
+	&__image-block {
+		
+		@include media($breakpoint-desktop) {
+			@include grid-columns(1, 4);
+			text-align: center;
+		}
+		
+		img {
+			display: inline-block;
+			vertical-align: top;
+		}	
+	}
+	
+	&__text {
+		@include media($breakpoint-desktop) {
+			@include grid-columns(3, 4);
+		}	
+	}
+	
+	&__footer-txt {
+		
+	}
+	
+}
+	

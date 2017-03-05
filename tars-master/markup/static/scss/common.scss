@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+// 1. Properties for sticky footer
+
+// Html
+html {
+  height: 100%; // 1
+  font-size: 62.5%;
+  //-webkit-font-smoothing: antialiased;
+}
+
+// Body
+body {
+  position: relative; // 1
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;   // 1
+  background: #f7f7f7;
+  font-size: 62.5%;
+  color: $color-base;
+  font-family: $font-base;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.section-box {
+		margin: 5rem 0;
+}
+
+
+
+
+// Links
+a {
+  @include transition(all $transition-duration-base);
+  @include hover(color, $color-base);
+  color: $color-brand;
+  text-decoration: none;
+  outline: none;
+}
+
+// B
+b {
+  font: {
+    weight: 700;
+  }
+}
+
+// Blockquote
+blockquote {
+  margin: 0;
+}
+
+// Fieldset
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// Figure
+figure {
+  margin: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+// Images
+img {
+  max-width: 100%;
+
+  &[width],
+  &[height] {
+    max-width: none;
+  }
+}
+
+// Lists
+dl, dd,
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Paragraph
+p {
+  	@include font(1.8rem, 2.4rem);
+		margin: 0;
+		&:not(:last-child) {
+				margin-bottom: 2rem;
+		}		
+		&:not(:first-child) {
+				margin-top: 2rem;
+		}
+}
+
+// Small
+small {
+  @include text-small;
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Textarea
+textarea {
+  resize: none;
+}
+

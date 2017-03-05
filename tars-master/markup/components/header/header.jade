@@ -1,0 +1,15 @@
+include ../nav/nav
+
+mixin header(data)
+	header.header 
+		.container
+				+nav()
+
+				.header__block
+					a.header__logo-block(href="#")
+						img(src="static/img/general/logo.png" alt="ast")
+
+					.header__buttons
+						a.header__button.header__button--blue(href="#") Подарочный каталог
+						
+						a.header__button.header__button--pink(href="#") Персональное предложение

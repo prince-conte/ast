@@ -1,0 +1,38 @@
+@import '../normalize.scss';
+
+
+@import '../libraries/bourbon/_bourbon.scss';
+@import '../libraries/neat/_neat.scss';
+
+@import '../fonts.scss';
+@import '../vars.scss';
+@import '../mixins.scss';
+
+
+
+@import '../_layout.scss';
+
+@import '../helpers.scss';
+
+@import '../common.scss';
+/* Libraries, which is used in current project. */
+@import 'partials/_libraries.scss';
+
+/* Libraries, which is used in current project. */
+@import 'built-in-partials/_service.scss';
+
+/* Plugins, which is used in current project. */
+@import 'partials/_plugins.scss';
+
+/* Components, which is used in current project. */
+@import 'partials/_components.scss';
+
+/* Additional style files. */
+@import '../etc/etc.scss';
+
+
+// plugins
+@import '../plugins/slick.scss';
+
+/* components */
+@import 'partials/_components.scss';

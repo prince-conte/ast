@@ -1,0 +1,198 @@
+// Mixins.
+
+
+// Grid
+@mixin grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start); // Reset
+  @include align-items(flex-start);     // Reset
+  margin: {
+    right: -#{$indent-base-mobile / 2};
+    left: -#{$indent-base-mobile / 2};
+  }
+
+  @include media($breakpoint-desktop) {
+    margin: {
+      right: -#{$indent-base-desktop / 2};
+      left: -#{$indent-base-desktop / 2};
+    }
+  }
+}
+
+@mixin grid-columns($columns-count, $columns-total, $standalone: false) {
+  width: 100% / $columns-total * $columns-count;
+
+  @if $standalone == false {
+    padding: {
+      right: $indent-base-mobile / 2;
+      left: $indent-base-mobile / 2;
+    }
+
+    @include media($breakpoint-desktop) {
+      padding: {
+        right: $indent-base-desktop / 2;
+        left: $indent-base-desktop / 2;
+      }
+    }
+  }
+}
+
+// Font
+@mixin font($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: strip-units($line-height) / strip-units($font-size);
+}
+
+// Direct parent
+@mixin direct-parent($parent-selector) {
+  $current-sequences: &;
+  $new-sequences: ();
+
+  @each $sequence in $current-sequences {
+    $current-selector: nth($sequence, -1);
+    $prepended-selector: join($parent-selector, $current-selector);
+    $new-sequence: set-nth($sequence, -1, $prepended-selector);
+    $new-sequences: append($new-sequences, $new-sequence, comma);
+  }
+
+  @at-root #{$new-sequences} {
+    @content;
+  }
+}
+
+// Hover
+@mixin hover($properties-list, $values-list, $parents-selector: '') {
+  $properties-length: length($properties-list);
+  $values-length: length($values-list);
+
+  @if $properties-length == $values-length {
+    .mod_no-touchevents & {
+      @if $parents-selector == '' {
+        &:hover,
+        &.hover {
+          @for $i from 1 through $properties-length {
+            #{nth($properties-list, $i)}: nth($values-list, $i);
+          }
+        }
+      } @else {
+        @include direct-parent($parents-selector) {
+          @for $i from 1 through $properties-length {
+            #{nth($properties-list, $i)}: nth($values-list, $i);
+          }
+        }
+      }
+    }
+  } @else {
+    @error "The number of properties (#{$properties-list}) and values (#{$values-list}) are not equal."
+  }
+}
+
+// Transition fix
+@mixin transition-fix {
+  @include backface-visibility(hidden);
+  @include transform(translate3d(0, 0, 0));
+}
+
+// Texts
+@mixin text-small {
+  @include font(1.2rem, 1.5rem);
+}
+
+@mixin text-base {
+  @include font(1.4rem, 2rem);
+}
+
+@mixin text-large {
+  @include font(1.8rem, 2.5rem);
+}
+
+// Headings
+@mixin h1 {
+  @include font(6rem, 8rem);
+  font-family: $font-light;
+  letter-spacing: .5pt;
+  text-transform: uppercase;
+
+  @include media($breakpoint-desktop) {
+    @include font(5.2rem, 6.5rem);
+  }
+}
+
+@mixin h2 {
+  @include font(3.4rem, 4rem);
+  font-family: $font-base;
+  letter-spacing: .5pt;
+
+  @include media($breakpoint-desktop) {
+    @include font(4rem, 5rem);
+  }
+}
+
+@mixin h3 {
+  @include font(2.2rem, 3rem);
+  font-family: $font-base;
+  letter-spacing: .5pt;
+  text-transform: uppercase;
+
+  @include media($breakpoint-desktop) {
+    @include font(3.2rem, 4rem);
+  }
+}
+
+@mixin h4 {
+  @include font(1.8rem, 2.5rem);
+  font-family: $font-base;
+  letter-spacing: .5pt;
+  text-transform: uppercase;
+
+  @include media($breakpoint-desktop) {
+    @include font(2.2rem, 3rem);
+  }
+}
+
+@mixin h5 {
+  @include text-large;
+  font-family: $font-base;
+}
+
+@mixin h6 {
+  @include text-base;
+  font-family: $font-base;
+}
+
+@mixin h7 {
+  @include text-small;
+  font-family: $font-base;
+}
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// You can add your own mixins here:

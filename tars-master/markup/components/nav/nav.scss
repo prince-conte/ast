@@ -1,0 +1,207 @@
+.navigate {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 60px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+		
+		&__container {
+				display: flex;
+				align-items: stretch;
+				height: 6rem;
+		}
+				
+		&__tab-link {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0 1.8rem;
+				border-left: 1px solid $color-border;
+				border-right: 1px solid $color-border;
+				
+				&:hover {
+						span {
+								transition: .2s;
+								color: $color-brand;
+						}
+				}
+								
+				span {
+						@include font(1.3rem, 1.3rem);
+						font-family: $font-bold;
+						color: $color-base;
+						text-transform: uppercase;
+				}
+				
+				i {
+						position: relative;
+						top: -.2rem;
+						margin-left: 1.8rem;						
+				}
+				
+		}	
+		
+		&__tab-search {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 1.7rem 1.8rem;
+				border-right: 1px solid $color-border;
+					
+				i {
+						@include size(2.6rem);
+						display: inline-block;
+						background: url(../img/general/search.png);
+						background-position: 50% 50%;
+						background-size: contain;
+						background-repeat: no-repeat;
+				}	
+				
+				
+				&:hover {
+						background: $color-brand;
+						border-right: 1px solid $color-brand;
+						
+						i {
+								background: url(../img/general/search-h.png);
+						}
+				}
+		}	
+		
+		&__tab-menu {
+				@include media($breakpoint-desktop) {
+					display: inline-flex;
+						padding: 0 2rem 0 3rem;
+				}
+		}
+		
+		&__tab-menu-item {			
+				@include media($breakpoint-mobile) {
+						display: none;
+				}
+				
+				@include media($breakpoint-desktop) {
+						@include font(1.6rem, 1.6rem);
+						transition: .2s;
+						padding: 2.4rem 2rem;
+						color: #6b6b6b;
+						
+						&:hover {
+								color: $color-brand2;
+						}
+				}
+				
+		}
+		
+		
+		&__tab-phone {
+				display: inline-flex;
+				justify-content: center;
+				flex-direction: column;
+				padding: 0 1.8rem;
+				border-left: 1px solid $color-border;		
+		}
+		
+		
+		&__tab-phone-num {
+				@include font(1.7rem, 1.8rem);
+				color: #231f20;
+				margin: .3rem 0;
+				white-space: nowrap
+				
+				&:hover {
+						color: $color-brand;
+				}
+				
+				i {
+						position: relative;
+						transform: rotate(90deg);
+						margin-left: 1rem;						
+				}
+				
+		}
+				
+		&__tab-phone-description {
+				@include font(1.3rem, 1.8rem);
+				font-family: $font-light;
+				color: #6b6b6b;
+				
+				&:hover {
+						color: $color-brand;
+				}
+		}
+		
+		
+		&__lang {
+				display: inline-flex;
+				margin-left: auto;
+								
+				.is-active {
+						background: $color-border;
+						border-color: $color-border;
+						
+						&:hover {
+								background: $color-border;
+								border-color: $color-border;
+								color: #231f20;
+						} 
+				}
+		}
+		
+		&__lang-item {
+				@include font(1.3rem, 1.4rem);
+				padding: 2.5rem .8rem;
+				font-family: $font-bold;
+				color: #231f20;
+				text-transform: uppercase;
+				border-left: 1px solid $color-border;
+				border-right: 1px solid $color-border;
+				
+				&:hover {
+						background: $color-brand;
+						color: #fff;
+						border-color: $color-brand;
+				} 
+				
+		}
+		
+		
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

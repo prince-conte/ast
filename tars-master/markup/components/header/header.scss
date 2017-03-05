@@ -1,0 +1,59 @@
+.header {
+		padding-top: 60px;
+		background: #fff;
+		
+		&__block {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+		}
+		
+		&__logo-block {
+				display: inline-block;
+				padding: 2rem 0 2.5rem;
+				
+				img {
+						vertical-align: top;
+				}
+		}
+		
+		
+		&__buttons {
+				
+		}
+		
+		&__button {
+				display: inline-block;
+				@include font(1.6rem, 1.8rem);
+				width: 25.6rem;
+				text-align: right;
+				color: #fff;
+				background: {
+						position: 50% 50%;
+						size: contain;
+						repeat: no-repeat; 
+				}
+				
+				&:first-child {
+						margin-right: 3rem;
+				}
+				
+				&:hover {
+						opacity: .8;
+				}
+				
+				
+				&--pink {
+						background-image: url(../img/general/button-pink.png); 
+						padding: 2.4rem 1.7rem 2.4rem 1.7rem;
+				}
+				
+				&--blue {
+						background-image: url(../img/general/button-blue.png); 
+						padding: 2.4rem 4.6rem 2.4rem 2rem;
+				}
+		}
+		
+		
+		
+}
