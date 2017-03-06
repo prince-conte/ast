@@ -64,6 +64,14 @@
 				background-image: url(../img/general/title2.png);
 			}
 		}
+						
+		&--three {
+			@include media($breakpoint-desktop) {
+				padding: 1.7rem 1.1rem 2rem  0rem;
+				color: $color-base;
+				background-image: url(../img/general/title3.png);
+			}
+		}
 		
 
 	}
@@ -107,6 +115,21 @@
 			@include font(1.8rem, 2.4rem);
 			text-align: center;
 			padding: 3rem;
+		}
+		
+	}
+			
+	&__three-title {
+		@include font(1rem, 1.2rem);
+		padding: 0 1rem;
+		margin-bottom: 2rem;
+		font-family: $font-light;
+		text-align: center;
+		color: $color-base;
+		
+		@include media($breakpoint-desktop) {
+			@include font(2.3rem, 2.8rem);
+			text-align: center;
 		}
 		
 	}
@@ -209,6 +232,36 @@
 		width: 100%;	
 		background: #353f69;
 	}
+		
+	&__block-three-content {
+		position: relative;
+		align-items: stretch;
+		width: 100%;	
+		background: #fff;
+	}
+	
+	&__options {
+		@include grid();
+		padding: 0 2rem 2rem;
+	}
+		
+	&__options-item {
+		@include grid-columns(1,2);
+		@include font(1.3rem, 2.4rem);
+		
+		&--title {
+			color: #888888;
+			text-align: right;
+		}
+				
+		&--value {
+			color: $color-base;
+			text-align: left;
+		}
+		
+	}
+	
+	
 	
 	
 }
