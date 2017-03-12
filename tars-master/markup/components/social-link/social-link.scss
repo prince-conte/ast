@@ -1,0 +1,186 @@
+.social-link {
+    position: relative;
+    margin: 4rem 0;
+    
+    
+
+    &:before {
+        position: absolute;
+        display: block;
+        top: -7px;
+        left: 4px;
+        width: 57px;
+        height: 19px;
+        content: '';
+        transform: translate(-54%, -100%);
+        background: {
+            size: contain;
+            position: 50% 50%;
+            image: url(../img/general/soc1after.png);
+        }
+    } 
+
+    &:after {
+        position: absolute;
+        display: block;
+        bottom: -10px;
+        right: 11px;
+        width: 42px;
+        height: 19px;
+        content: '';
+        transform: translate(54%, 0);
+        background: {
+            size: contain;
+            position: 50% 50%;
+            image: url(../img/general/socbefore.png);
+        }
+    } 
+
+    
+    &__item {
+        @include font(2rem, 1.3rem);
+        position: relative;
+        padding: 2rem 2.4rem;
+        color: #fff;
+        
+        i {
+            position: relative;
+        }
+        
+        
+        &--vk {
+            &:hover {
+                color: $color-brand;
+            
+                &:before {
+                    background-image: url(../img/general/soc1-h.png);
+                }
+            }
+        }
+        
+        
+        &--vk:before {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 74px;
+            height: 52px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/soc1.png);
+            }
+        }         
+
+        &--facebook {
+            margin-left: -24px;
+            
+            &:hover {
+                color: $color-brand;
+            
+                &:before {
+                    background-image: url(../img/general/soc2-h.png);
+                }
+            }
+        }
+
+        &--facebook:before {
+            position: absolute;
+            display: block;
+            top: 11px;
+            left: 0;
+            width: 74px;
+            height: 52px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/soc2.png);
+            }
+        }
+        
+        &--twitter {
+            margin-left: -19px;
+            
+            &:hover {
+                color: #4ebff1;
+            
+                &:before {
+                    background-image: url(../img/general/soc3-h.png);
+                }
+            }
+        }
+
+        &--twitter:before {
+            position: absolute;
+            display: block;
+            top: 0px;
+            left: -5px;
+            width: 74px;
+            height: 52px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/soc3.png);
+            }
+        }
+                
+        &--instagram {
+            margin-left: -27px;
+            
+            &:hover {
+                color: #4ebff1;
+            
+                &:before {
+                    background-image: url(../img/general/soc4-h.png);
+                }
+            }
+        }
+
+        &--instagram:before {
+            position: absolute;
+            display: block;
+            top: 11px;
+            left: -1px;
+            width: 74px;
+            height: 52px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/soc4.png);
+            }
+        }
+                        
+        &--youtube-play {
+            margin-left: -19px;
+
+            &:hover {
+                color: $color-brand;
+            
+                &:before {
+                    background-image: url(../img/general/soc5-h.png);
+                }
+            }        
+        }
+
+        &--youtube-play:before {
+            position: absolute;
+            display: block;
+            top: 0px;
+            left: -6px;
+            width: 74px;
+            height: 52px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/soc5.png);
+            }
+        }
+        
+    }
+}

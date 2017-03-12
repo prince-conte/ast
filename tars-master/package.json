@@ -16,6 +16,8 @@
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
+    "material-design-icons": "^3.0.1",
+    "mdi": "^1.8.36",
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {

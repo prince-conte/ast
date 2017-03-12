@@ -1,0 +1,147 @@
+.index-comments {
+    position: relative;
+    margin: 0;
+    margin-top: -5rem;
+    padding: 5rem 0;
+    
+    &__bg-one {
+        
+        @include media($breakpoint-desktop) {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            height: 100%;
+                        
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }  
+        
+        &--two {
+            @include media($breakpoint-desktop) {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: auto;
+                right: 0;
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }             
+        }    
+        
+    }
+    
+
+    &__title {
+    @include h2();
+    margin-bottom: 4rem;
+    text-align: left;
+    color: $color-title;
+    }
+    
+    &__slider {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+    }
+
+    &__item {
+        padding: 2rem 3rem;
+        background: #fff;
+        margin: 0 1rem;
+        outline: none !important; // for slick     
+    }
+    
+    
+    &__ava-block {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__image {
+        width: 7.8rem;
+        margin-right: 2rem;
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+            border-radius: 50%;
+        }
+    }
+    
+    &__description {
+        align-self: center;
+    }
+    
+    &__content {
+        margin-top: 1.5rem;
+        
+        p {
+            @include font(1rem, 1.4rem);
+            
+            @include media($breakpoint-desktop) {
+                @include font(1.7rem, 2.4rem);
+            }        
+        }
+    }
+    
+    &__name {
+        color: $color-brand;
+        @include font(1rem, 1.4rem);
+        
+        @include media($breakpoint-desktop) {
+            @include font(2.2rem, 2.4rem);
+        }
+        
+        
+    }
+    
+    &__company {
+        @include font(1rem, 1.4rem);
+        color: #888888;
+        
+        @include media($breakpoint-desktop) {
+            @include font(1.4rem, 2.4rem);
+        }     
+    }
+    
+    
+
+
+    .slick-nav {
+    position: absolute;
+    top: 0%;
+    width: 2rem;
+    height: 100%;
+    cursor: pointer;
+    z-index: 9999;
+    background: {
+      position: 50% 50%;
+      size: contain;
+      image: url(../img/general/prev.png);
+      repeat: no-repeat;
+      color: #f7f7f7;
+    }
+
+    &:hover {
+      background-image: url(../img/general/prev-h.png);
+    }
+    }
+
+
+    .slick-prev {
+    left: -1rem;
+    }
+
+    .slick-next {
+    right: -.5rem;
+    transform: rotate(180deg);
+    }
+
+
+}

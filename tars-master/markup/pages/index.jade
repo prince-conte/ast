@@ -3,11 +3,15 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/example/example
+    include ../components/index-slider/index-slider
     include ../components/index-about/index-about
     include ../components/index-services/index-services
     include ../components/index-partners/index-partners
     include ../components/index-news/index-news
+    include ../components/index-comments/index-comments
     include ../components/header/header
+    include ../components/social-link/social-link
+    include ../components/search-block/search-block
     include ../components/footer/footer
 
     head
@@ -16,10 +20,12 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         +header()
         main.page__wrapper
+            +index-slider()
             +index-about()
             +index-services()
             +index-partners()
             +index-news()
+            +index-comments()
                 
         +footer()
 

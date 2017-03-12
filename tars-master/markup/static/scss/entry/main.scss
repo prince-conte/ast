@@ -3,6 +3,7 @@
 
 @import '../libraries/bourbon/_bourbon.scss';
 @import '../libraries/neat/_neat.scss';
+@import '../libraries/mdi/materialdesignicons.scss';
 
 @import '../fonts.scss';
 @import '../vars.scss';
@@ -13,6 +14,8 @@
 @import '../_layout.scss';
 
 @import '../helpers.scss';
+
+@import '../form.scss';
 
 @import '../common.scss';
 /* Libraries, which is used in current project. */
