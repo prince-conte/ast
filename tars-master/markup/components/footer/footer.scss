@@ -2,13 +2,12 @@
     background: #e7e8e9;
     
     @include media($breakpoint-desktop) {
-    padding: 6rem 0;
+    padding: 4.6rem 0;
     }
     
     ul {
         list-style: none;
         list-style-type: none;
-        margin-bottom: 2.35rem;
     }
     
     
@@ -35,7 +34,8 @@
     
     &__menu-box {
         @include media($breakpoint-desktop) {
-            @include grid();  
+            @include grid(); 
+;
         }    
     }
         
@@ -57,10 +57,16 @@
         
         @include media($breakpoint-desktop) {
             @include font(1.5rem, 3.4rem);
-        }    
+        }
+        
+        
+        &--two {
+            margin-top: 2.35rem;
+        }
     }
     
     &__menu-list {
+
         a {
             @include font(1.2rem, 2.8rem);
             display: block;
