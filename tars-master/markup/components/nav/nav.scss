@@ -70,11 +70,21 @@
 						}
 				}
 		}	
+    
+    .is-active {
+        background: $color-brand;
+        border-right: 1px solid $color-brand;
+
+        i {
+            background: url(../img/general/search-h.png);
+        } 
+    }
 		
 		&__tab-menu {
 				@include media($breakpoint-desktop) {
+					position: relative;
 					display: inline-flex;
-						padding: 0 2rem 0 3rem;
+					padding: 0 2rem 0 3rem;
 				}
 		}
 		
@@ -92,10 +102,62 @@
 						&:hover {
 								color: $color-brand2;
 						}
-				}
-				
+				}		
 		}
+    
+    &__search-form {
+        @include media($breakpoint-desktop) {
+            @include size(100%);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            padding: 5px;
+
+        }
+        
+        input {
+            @include media($breakpoint-desktop) {
+                box-sizing: border-box;
+                @include size(100%);
+                @include font(1.4rem, 1.4rem);
+                display: block;
+                background: #efeff0;
+                color: #939495;
+                padding: 1.6rem;
+                padding-right: 5rem;
+                border: 0;
+            }        
+        }
+        
+
+        
+    }
 		
+
+    &__search-go {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 5rem;
+        background: transparent;
+        border: 0;
+
+        i {
+            @include size(2.7rem);
+            display: inline-block;
+            background: url(../img/general/search.png);
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;    
+        }
+
+    }	
+
 		
 		&__tab-phone {
 				display: inline-flex;

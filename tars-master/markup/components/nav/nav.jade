@@ -8,7 +8,7 @@ mixin nav()
 							span Заявка
 							i.styck-r
 
-						a.navigate__tab-search(href="")
+						a.navigate__tab-search.js-open-search(href="#")
 							i
 							
 							
@@ -19,6 +19,11 @@ mixin nav()
 							a.navigate__tab-menu-item(href="#") b2b
 							a.navigate__tab-menu-item(href="#") b2c
 							a.navigate__tab-menu-item(href="#") Контакты
+              
+							form.navigate__search-form#nav-search
+								input(type="search" placeholder="Поиск")
+								button.navigate__search-go
+									i
 							
 						.navigate__tab-phone
 							a.navigate__tab-phone-num(href="tel:84952580037") +7 (495) 258 00 37
