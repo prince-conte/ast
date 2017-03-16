@@ -1,7 +1,7 @@
 mixin nav()
 
 		nav.navigate
-			.container
+			.container.is-desktop
 
 					.navigate__container
 						a.navigate__tab-link(href="")
@@ -34,6 +34,20 @@ mixin nav()
 							a.navigate__lang-item eng
 							a.navigate__lang-item.is-active рус
 							
+										
+			.container.is-mobile
+				.navigate__mobile-container
+					a.navigate__burger(href="#")
+						span
+            
+					a.navigate__mobile-logo
+						img(src="static/img/general/logo.png" alt="ast")
+      
+					.navigate__lang
+						a.navigate__lang-item eng
+						a.navigate__lang-item.is-active рус
+
+
 						
 
 		

@@ -1,6 +1,10 @@
 .header {
 		padding-top: 60px;
 		background: #fff;
+    
+    @include media($breakpoint-mobile) {
+        padding-top: 52px;
+    }
 		
 		&__block {
 				display: flex;
@@ -37,6 +41,10 @@
 				&:first-child {
 						margin-right: 3rem;
 				}
+        
+        @include media($breakpoint-mobile) {
+            @include font(1rem, 1.1rem);
+        }
 				
 				&:hover {
 						opacity: .8;
@@ -46,6 +54,11 @@
 				&--pink {
 						background-image: url(../img/general/button-pink.png); 
 						padding: 2.4rem 1.7rem 2.4rem 1.7rem;
+            
+            @include media($breakpoint-mobile) {
+								width: auto;
+                padding: 1.4rem 1.7rem 1.4rem 2.8rem;
+            }
 				}
 				
 				&--blue {
@@ -53,7 +66,31 @@
 						padding: 2.4rem 4.6rem 2.4rem 2rem;
 				}
 		}
-		
-		
-		
+
+    &__mobile-block {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 7rem;
+    }
+    
+    &__mobile-phone {
+
+    }
+        
+    &__mobile-phone-number {
+				display: block;
+        @include font(1.4rem, 1.5rem);
+        color: $color-base;
+				white-space: nowrap;
+    }
+            
+    &__mobile-phone-call {
+				display: block;
+        @include font(1rem, 1.5rem);
+        color: $color-brand;
+        text-decoration: underline;
+				white-space: nowrap;
+    }
+    
 }

@@ -1,8 +1,17 @@
 .index-partners {
 	
 	&__grid {
-		width: calc(100% + 2rem);
-		margin-left: -1rem;
+		
+		@include media($breakpoint-mobile) {
+			padding: 0 1rem;			
+		}
+				
+		@include media($breakpoint-desktop) {
+			width: calc(100% + 2rem);
+			margin-left: -1rem;			
+		}
+		
+
 	}
 	
 	&__item {
@@ -44,8 +53,13 @@
 	
 	
 	.slick-prev {
-		left: -1rem;
+		left: -.5rem;
+		
+		@include media($breakpoint-desktop) {
+			left: -1rem;
+		}
 	}
+		
 		
 	.slick-next {
 		right: -.5rem;

@@ -7,6 +7,10 @@
 		background-color: rgb(255, 255, 255);
 		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     z-index: 9999;
+    
+    @include media($breakpoint-mobile) {
+        height: 52px;
+    }
 		
 		&__container {
 				display: flex;
@@ -128,13 +132,9 @@
                 padding-right: 5rem;
                 border: 0;
             }        
-        }
-        
-
-        
+        }     
     }
 		
-
     &__search-go {
         position: absolute;
         top: 0;
@@ -157,7 +157,6 @@
         }
 
     }	
-
 		
 		&__tab-phone {
 				display: inline-flex;
@@ -166,8 +165,7 @@
 				padding: 0 1.8rem;
 				border-left: 1px solid $color-border;		
 		}
-		
-		
+				
 		&__tab-phone-num {
 				@include font(1.7rem, 1.8rem);
 				color: #231f20;
@@ -182,8 +180,7 @@
 						position: relative;
 						transform: rotate(90deg);
 						margin-left: 1rem;						
-				}
-				
+				}				
 		}
 				
 		&__tab-phone-description {
@@ -194,8 +191,7 @@
 				&:hover {
 						color: $color-brand;
 				}
-		}
-		
+		}		
 		
 		&__lang {
 				display: inline-flex;
@@ -226,11 +222,75 @@
 						background: $color-brand;
 						color: #fff;
 						border-color: $color-brand;
-				} 
-				
+				} 				
 		}
-		
-		
+    
+    &__mobile-container {
+        display: flex;
+        align-items: stretch;
+        height: 5.2rem;
+			
+    .navigate__lang {
+        margin-left: auto;
+        margin-right: -1rem;
+    }			
+    .navigate__lang-item {
+        font-size: 1rem;
+    }
+    } 
+    
+    &__burger {
+        position: absolute;
+				left: 0;
+        top: 0;
+        width: 5.3rem;
+        height: 100%;
+        border-right: 1px solid $color-border;
+        
+        span {
+            position: absolute;
+            top: 1.5rem;
+            left: 1rem;
+            display: block;
+            width: 3.2rem;
+            height: .5rem;
+            border-radius: 2px;
+            background: $color-brand;
+        
+            &:before {
+                @include size(100%);
+                position: absolute;
+                left: 0;
+                top: 1rem;
+                display: block;
+                border-radius: 2px;
+                background: #eabe00;
+                content: "";
+            } 
+            
+            &:after {
+                @include size(100%);
+                position: absolute;
+                left: 0;
+                top: 2rem;
+                display: block;
+                border-radius: 2px;
+                background: $color-brand2;
+                content: "";
+            }
+        }
+    }
+    
+    
+    &__mobile-logo {
+        padding: .8rem 1.7rem;
+        margin-left: 4.3rem;
+        
+        img {
+            height: 100%;
+            width: auto;
+        }      
+    }    
 		
 }
 

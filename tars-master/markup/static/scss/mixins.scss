@@ -120,12 +120,12 @@
 }
 
 @mixin h2 {
-  @include font(3.4rem, 4rem);
+  @include font(1.4rem, 1.7rem);
   font-family: $font-base;
   letter-spacing: .5pt;
 
   @include media($breakpoint-desktop) {
-    @include font(4rem, 5rem);
+    @include font(3.4rem, 4rem);
   }
 }
 

@@ -115,7 +115,7 @@ ol, ul {
 
 // Paragraph
 p {
-  	@include font(1.8rem, 2.4rem);
+  	@include font(1rem, 1.4rem);
 		margin: 0;
 		&:not(:last-child) {
 				margin-bottom: 2rem;
@@ -123,6 +123,20 @@ p {
 		&:not(:first-child) {
 				margin-top: 2rem;
 		}
+	
+	@include media($breakpoint-desktop) {
+		@include font(1.8rem, 2.4rem);
+	}
+		&:not(:first-child) {
+				margin-top: 1.4rem;
+		}	
+	
+		&:not(:last-child) {
+				margin-top: 0;
+				margin-bottom: 1.4rem;
+		}		
+
+	
 }
 
 // Small

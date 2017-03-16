@@ -5,7 +5,7 @@ mixin header(data)
 		.container
 				+nav()
 
-				.header__block
+				.header__block.is-desktop
 					a.header__logo-block(href="#")
 						img(src="static/img/general/logo.png" alt="ast")
 
@@ -13,3 +13,12 @@ mixin header(data)
 						a.header__button.header__button--blue(href="#") Подарочный каталог
 						
 						a.header__button.header__button--pink(href="#") Персональное предложение
+						
+						
+				.header__mobile-block.is-mobile
+					.header__mobile-phone
+						a.header__mobile-phone-number(href="#") +7 (495) 258 00 37
+						a.header__mobile-phone-call(href="#") Обратный звонок
+        
+					a.header__button.header__button--pink(href="#") Персональное предложение
+
