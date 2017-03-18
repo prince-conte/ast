@@ -6,7 +6,9 @@
 html {
   height: 100%; // 1
   font-size: 62.5%;
-  //-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    
 }
 
 // Body
@@ -26,7 +28,17 @@ footer {
 }
 
 .section-box {
-		margin: 5rem 0;
+		margin: 4rem 0;
+	
+		@include media($breakpoint-desktop) {
+			margin: 5rem 0;
+		}
+	
+	&:last-child {	
+		@include media($breakpoint-desktop) {
+				margin: 5rem 0 7rem;
+		}
+	}
 }
 
 

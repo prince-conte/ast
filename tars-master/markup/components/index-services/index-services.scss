@@ -48,10 +48,10 @@
 	
 	&__grid {
 		@include grid();
+		justify-content: center;
 		
 		@include media($breakpoint-mobile) {
 			flex-wrap: wrap;
-			justify-content: center;
 		}
 		
 	}
@@ -142,6 +142,30 @@
 				}
 			}
 		}
+							
+		&--left-min {
+			text-align: left;
+        padding-left: 3rem;
+			
+
+			.index-services__title {
+				animation: hovers-one-bottom .3s linear 0s 1 alternate forwards;
+			}				
+
+			img {
+				animation: hovers-two-top .3s linear 0s 1 alternate forwards;
+			}			
+
+			&:hover {
+				.index-services__title {
+					animation: hovers-one-top .3s linear 0s 1 alternate forwards;
+				}				
+				
+				img {
+					animation: hovers-two-bottom .3s linear 0s 1 alternate forwards;
+				}
+			}
+		}
 						
 		&:nth-child(4) {
 			text-align: right;
@@ -160,9 +184,6 @@
 				margin-bottom: 1rem;
 				animation: hovers-one-bottom .3s linear 0s 1 alternate forwards;
 				
-				@include media($breakpoint-desktop) {
-					margin-bottom: 2rem;
-				}
 				
 			}
 

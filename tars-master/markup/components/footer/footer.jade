@@ -126,13 +126,15 @@ mixin footer(data)
                 .footer__menu-contacts
                 
                     .footer__contacts-box
-                        a(href="tel:84952580037").footer__contacts-link <i class="mdi mdi-cellphone-iphone"></i> Москва: (495) 258 00 37
-                        a(href="#").footer__contacts-link.footer__contacts-link--addres <i class="mdi mdi-map-marker"></i> Каширский проезд,  д.23, стр. 4
-                            span.footer__link-map Показать на карте
-                        a(href="mailto:ast.info@ast-inter.ru").footer__contacts-link <i class="mdi mdi-email-outline"></i> ast.info@ast-inter.ru
-                        
+                        .footer__link-body
+                            a(href="tel:84952580037").footer__contacts-link <i class="mdi mdi-cellphone-iphone"></i> Москва: (495) 258 00 37
+                            a(href="#").footer__contacts-link.footer__contacts-link--addres <span><i class="mdi mdi-map-marker"></i> Каширский проезд,  д.23, стр. 4</span>
+                                span.footer__link-map Показать на карте
+                            a(href="mailto:ast.info@ast-inter.ru").footer__contacts-link <i class="mdi mdi-email-outline"></i> ast.info@ast-inter.ru
+
                         +social-link()
-                        +search-block()
+                        .is-desktop
+                            +search-block()
                         
                         .footer__copyright Все права защищены "ACT" 2016
 

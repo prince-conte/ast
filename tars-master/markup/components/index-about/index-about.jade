@@ -1,11 +1,18 @@
 mixin index-about()
 
 	section.index-about
+	
+		.index-about__bg-r
+			img(src="static/img/general/ab-r.png")
+				
+		.index-about__bg-l
+			img(src="static/img/general/ab-l.png")
+			
 		.container
 			h2.index-about__title О Компании
 			article.index-about__content
 				.index-about__image-block
-					img(src="static/img/general/face.png" class="is-desktop")
+					img(src="static/img/general/face.png" class="is-desktop" alt="ast")
 					
 				.index-about__text
 				
@@ -19,5 +26,5 @@ mixin index-about()
 
 							p <b>Надеемся, что однажды познакомившись с нами, Вы станете нашими партнерами и друзьями.</b>
 							
-						img(src="static/img/general/face.png" class="is-mobile")
+						img(src="static/img/general/face.png" class="is-mobile"  alt="ast")
 

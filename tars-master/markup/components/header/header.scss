@@ -19,6 +19,12 @@
 				img {
 						vertical-align: top;
 				}
+        
+        &--min {
+            img {
+                max-height: 7rem; 
+            }
+        }
 		}
 		
 		

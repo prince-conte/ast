@@ -1,9 +1,44 @@
 .index-about {
 	@include background(linear-gradient(#f7f7f7, #dddfe1) left repeat);
 	padding-top: 3rem;
+  position: relative;
+    
 	@include media($breakpoint-desktop) {
 			padding-top: 6rem;
 	}
+    
+    
+    &__bg-r {
+			
+			display: none;
+			
+        @include media(min-width 1700px) {
+            position: absolute;
+						display: block;
+            top: 0;
+            right: 5rem;
+            img {
+                width: auto;
+                vertical-align: top;
+            }
+        }
+    }
+	    
+    &__bg-l {
+			
+			display: none;
+			
+        @include media(min-width 1700px) {
+            position: absolute;
+						display: block;
+            bottom: 5rem;
+            left: 3rem;
+            img {
+                width: auto;
+                vertical-align: top;
+            }
+        }
+    }
 	
 	&__title {
 		@include h2();

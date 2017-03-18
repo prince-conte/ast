@@ -1,0 +1,254 @@
+.history {
+
+    p {
+    @include media($breakpoint-desktop) {
+        padding-right: 9.5rem;
+        list-style: 2.6rem;
+    }           
+    }
+    
+    &__title {
+        margin-bottom: 2rem;
+        color: $color-title;
+        
+        @include media($breakpoint-desktop) {
+            margin-bottom: 3.5rem;
+        }
+    }
+    
+    &__years-grid {
+        display: flex;
+        flex-direction: column;
+        
+        
+        @include media($breakpoint-desktop) {
+            @include grid();
+            flex-direction: row;
+            margin-bottom: 4rem;
+            padding-left: 13rem;
+            align-items: center;
+            padding-right: 9.5rem;
+        }
+        
+        
+        @include media($breakpoint-mobile) {
+            margin-bottom: 2rem;
+            
+        
+            &:nth-child(2n) {
+
+                .history__years-item--right {
+                    order: 1;
+                }
+
+                .history__years-item--left {
+                    order: 2;
+                }
+
+            }
+            
+            
+        }
+        
+
+        
+        
+        
+        
+    }
+    
+    &__years-item {
+                
+        @include media($breakpoint-desktop) {
+            @include grid-columns(1, 2);
+        }
+        
+        
+        &--right {
+            text-align: left;
+            @include media($breakpoint-desktop) {   
+                padding-left: 4rem;
+            }
+            .history__button {
+                padding: 1.4rem 2rem 1rem 4rem;
+            } 
+            
+        }    
+        
+        &--left {
+            text-align: right;
+            @include media($breakpoint-desktop) {   
+                padding-right: 4rem;
+            }
+                
+            .history__button {
+                padding: 1.4rem 4rem 1rem 2rem;
+            }  
+        }
+    }
+    
+    &__button {
+        @include font(3.4rem, 3.4rem);
+        display: inline-block;
+        font-family: $font-light;
+        color: #fff;
+        text-transform: uppercase; 
+        min-width: 5.2rem;
+        
+        background: {
+            position: 50% 50%;
+            size: contain;
+            repeat: no-repeat;
+        }
+        
+        @include media($breakpoint-mobile) {   
+            order: 1;
+        }
+        
+        &--2025 {
+            background-image: url(../img/general/hist1.png);
+        }  
+        
+        &--2017 {
+            background-image: url(../img/general/hist2.png);
+        }
+                
+        &--2013 {
+            background-image: url(../img/general/hist3.png);
+        }
+                
+        &--2011 {
+            background-image: url(../img/general/hist4.png);
+        }
+                
+        &--2010 {
+            background-image: url(../img/general/hist5.png);
+        }
+                
+        &--2007 {
+            background-image: url(../img/general/hist6.png);
+        }
+                
+        &--2003 {
+            background-image: url(../img/general/hist7.png);
+        }
+                
+        &--1999 {
+            background-image: url(../img/general/hist8.png);
+        }
+                
+        &--1996 {
+            background-image: url(../img/general/hist9.png);
+        }
+                
+        &--1993 {
+            background-image: url(../img/general/hist10.png);
+        }
+                
+        &--1992 {
+            background-image: url(../img/general/hist11.png);
+        }
+                
+        &--1991 {
+            background-image: url(../img/general/hist12.png);
+        }
+        
+    }
+    
+    &__years-text {
+        @include font(1rem, 1.4rem);
+        font-family: $font-light;
+        display: inline-block;
+        
+        @include media($breakpoint-desktop) {   
+            @include font(1.6rem, 2.4rem);
+        } 
+        
+        @include media($breakpoint-mobile) {
+            margin-top: 1rem;
+            text-align: left
+        }
+    }
+    
+    
+    
+    &__about {
+        display: flex;
+            
+        @include media($breakpoint-mobile) {
+            flex-direction:column;
+        }
+        
+        @include media($breakpoint-desktop) {
+            align-items: stretch;
+        }  
+        
+        &:nth-child(2n+1) {
+            @include media($breakpoint-desktop) {
+                .history__about-image {
+                    order: 1;
+                }                
+                
+                .history__about-text {
+                    order: 2;
+                }
+            }
+        }
+              
+        &:nth-child(2n) {
+            @include media($breakpoint-desktop) {
+                .history__about-image {
+                    order: 2;
+                }                
+                
+                .history__about-text {
+                    order: 1;
+                }
+            }
+        }
+        
+    }
+    
+    &__about-image {
+        @include media($breakpoint-desktop) {
+            width: 50%;
+            img {
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+            }
+        }
+        
+        @include media($breakpoint-mobile) {
+            order: 1;
+        }
+    }
+        
+    &__about-text {
+        background: #fff;
+        padding: 2rem;
+        
+        @include media($breakpoint-mobile) {
+            order: 2;
+        }
+        
+        @include media($breakpoint-desktop) {
+            display: flex;
+            width: 50%;
+            padding: 3rem;
+        }
+        
+        p {
+            font-family: $font-light;
+            padding-right: 0;
+            align-self: center;
+            
+            @include media($breakpoint-desktop) {
+                line-height: 2.6rem;
+            }
+        }
+    }
+    
+    
+
+}

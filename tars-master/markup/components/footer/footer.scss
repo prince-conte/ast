@@ -1,4 +1,5 @@
 .footer {
+		padding: 3rem 0 0;
     background: #e7e8e9;
     
     @include media($breakpoint-desktop) {
@@ -19,12 +20,20 @@
     }
     
     &__menu-grid {
+				@include grid-columns(6, 6);
+				
+				@include media($breakpoint-mobile) {
+						justify-content: center;	
+				}
+			
         @include media($breakpoint-desktop) {
             @include grid-columns(4, 6);
         }
     }
         
     &__menu-contacts {
+				@include grid-columns(6, 6);
+			
         @include media($breakpoint-desktop) {
             @include grid-columns(2, 6);
             border-left: 1px solid #d4d6d9;
@@ -33,16 +42,21 @@
     }
     
     &__menu-box {
-        @include media($breakpoint-desktop) {
-            @include grid(); 
-;
-        }    
+				@include grid(); 
+			
+        @include media($breakpoint-mobile) {
+            margin-bottom: -1rem; 
+						padding: 0 3rem;
+        } 
     }
         
     &__menu-box-item {
         @include grid-columns(2, 4); 
         text-align: left;
         
+        @include media($breakpoint-mobile) {
+            margin-bottom: 3rem; 
+        }           
         @include media($breakpoint-desktop) {
             @include grid-columns(1, 4);  
         }    
@@ -61,14 +75,18 @@
         
         
         &--two {
+					margin-top: 4.4rem;
+					
+					@include media($breakpoint-desktop) {
             margin-top: 2.35rem;
+					}
         }
     }
     
     &__menu-list {
 
         a {
-            @include font(1.2rem, 2.8rem);
+            @include font(1.2rem, 2.2rem);
 						font-family: $font-light;
             display: block;
             color: #939495;
@@ -88,9 +106,29 @@
     }
     
     &__contacts-box {
-        padding-left: 8rem;
+        
+        @include media($breakpoint-desktop) {
+            padding-left: 8rem;
+        }
+        
+        @include media($breakpoint-mobile) {
+            margin-left: -2rem;
+            margin-right: -2rem;
+            margin-bottom: -3rem; 
+            padding: 3rem 2rem 0rem;
+            background: #f7f7f7;
+            
+        }  
+    }
+    
+    
+    &__link-body {
+        @include media($breakpoint-mobile) {
+         @include grid();    
+        }
         
     }
+    
     
     &__contacts-link {
         @include font(1rem, 1.4rem);
@@ -101,17 +139,30 @@
             color: $color-brand;
         } 
         
+        span {
+            white-space: nowrap;
+        }
+        
+        @include media($breakpoint-mobile) {
+            @include grid-columns(1, 2);
+        }
+        
         @include media($breakpoint-desktop) {
         @include font(1.7rem, 3.4rem);
         }
         
         i {
-            @include font(2rem, 2rem);
+            @include font(1rem, 1rem);
             position: relative;
-            top: .3rem;
+            top: .1rem;
             display: inline-block;
-            margin-right: .3rem;
+            margin-right: .2rem;
             color: $color-brand;
+            
+            @include media($breakpoint-desktop) {
+                @include font(2rem, 2rem);
+                 margin-right: .3rem;
+            }
             
         } 
         
@@ -123,12 +174,13 @@
     
     &__link-map {
         position: relative;
-        top: -.6rem;
         color: #24aae1;
         display: block;
+        padding-left: 1.4rem;
     
 
         @include media($breakpoint-desktop) {
+            top: -.6rem;
             @include font(1.4rem, 1.5rem);
             padding-left: 2.7rem;
         }
@@ -136,6 +188,17 @@
     
     
     &__copyright {
+        
+        @include media($breakpoint-mobile) {
+            @include font(1rem, 1.5rem);
+            margin-left: -2rem;
+            margin-right: -2rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            background: #e7e8e9;
+            
+        }  
+        
         
         @include media($breakpoint-desktop) {
             @include font(1.4rem, 1.4rem);

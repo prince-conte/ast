@@ -2,9 +2,14 @@
     position: relative;
     margin: 0;
     margin-top: -5rem;
-    padding: 5rem 0;
+    padding: 4rem 0;
+	
+		@include media($breakpoint-desktop) {
+			padding: 3rem 0;		
+		}
     
     &__bg-one {
+			display: none;
         
         @include media($breakpoint-desktop) {
             position: absolute;
@@ -20,6 +25,7 @@
         }  
         
         &--two {
+					display: none;
             @include media($breakpoint-desktop) {
                 position: absolute;
                 display: block;
@@ -40,14 +46,29 @@
 
     &__title {
     @include h2();
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     text-align: left;
     color: $color-title;
+			
+		@include media($breakpoint-desktop) {
+			margin-bottom: 4rem;
+		}
+			
+			
     }
     
-    &__slider {
-        width: calc(100% + 2rem);
-        margin-left: -1rem;
+    &__slider {		
+			
+		@include media($breakpoint-mobile) {
+			padding: 0 1rem;			
+		}
+				
+		@include media($breakpoint-desktop) {
+			width: calc(100% + 2rem);
+			margin-left: -1rem;			
+		}
+		
+			
     }
 
     &__item {
@@ -64,8 +85,15 @@
     }
     
     &__image {
+			  width: 3.2rem;
+        margin-right: 1rem;
+			
+			@include media($breakpoint-desktop) {
         width: 7.8rem;
         margin-right: 2rem;
+				
+			}
+			
         img {
             width: 100%;
             height: auto;
@@ -135,12 +163,17 @@
 
 
     .slick-prev {
-    left: -1rem;
+			left: -.5rem;
+
+			@include media($breakpoint-desktop) {
+				left: -1rem;
+			}
+			
     }
 
     .slick-next {
-    right: -.5rem;
-    transform: rotate(180deg);
+			right: -.5rem;
+			transform: rotate(180deg);
     }
 
 

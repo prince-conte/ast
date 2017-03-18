@@ -1,6 +1,12 @@
 .social-link {
     position: relative;
-    margin: 4rem 0;
+    margin: 5rem auto;
+    max-width: 26.7rem;
+    
+    
+    @include media($breakpoint-desktop) {
+        margin: 4rem 0;
+    }
     
     
 
