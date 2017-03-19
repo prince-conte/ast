@@ -1,0 +1,176 @@
+.jobs-info {
+
+	&__title {
+		margin-bottom: 2rem;
+		text-align: left;
+		color: $color-title;
+		
+		@include media($breakpoint-desktop) {
+					margin-bottom: 3rem;
+		}
+		
+	}
+	
+	&__vacancy {
+		margin: 2rem 0;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__vacancy-title {
+		@include font(1.6rem, 2rem);
+		position: relative;
+		padding: 1rem 4rem 1rem 2rem;
+		font-family: $font-light;
+		color: #fff;
+		background: $color-brand2;
+		
+		@include media($breakpoint-desktop) {
+			@include font(2.8rem, 4rem);
+			padding: 1.6rem 4rem 1.6rem 3rem;
+		}
+		
+		
+		
+		i {
+			@include font (2.2rem, 2.2rem);
+			position: absolute;
+			top: 50%;
+			right: 1.5rem;
+			color: #fff;
+			transform: translateY(-50%) rotate(90deg);
+			
+			@include media($breakpoint-desktop) {
+				@include font (3.2rem, 3.2rem);
+				right: 2.5rem;
+			}
+			
+		}
+	}
+	
+	&__content {
+		display: none;
+		padding: 2rem 1rem;
+		background: #fff;
+		
+		@include media($breakpoint-desktop) {
+			padding: 4rem 3rem;
+		}
+	}
+	
+	&__list-statics {
+		margin-bottom: 2rem;
+		
+		@include media($breakpoint-desktop) {
+			margin-bottom: 3rem;
+		}
+	}
+	
+	
+	
+	&__statics {
+
+	
+		span {
+			@include font(1.2rem, 1.8rem);
+			font-family: $font-light;
+			display: inline-block;
+			
+			@include media($breakpoint-desktop) {
+				@include font(1.8rem, 3.6rem);
+			}
+			
+		}
+		
+		li:before {
+			display: none !important;
+		}
+	}
+	
+	
+	
+	&__statics-label {
+		margin-right: 2rem;
+		color: #888888;
+		cursor: pointer;
+		
+		@include media($breakpoint-desktop) {
+			min-width: 20.5rem;
+			margin-right: 6rem;
+		}
+		
+	}
+	
+	&__statics-value {
+		color: $color-base;
+	}
+	
+	
+	&__content-title {
+		@include font(1.4rem, 2rem);
+		margin-bottom: 1rem;
+		
+		@include media($breakpoint-desktop) {
+		@include font(2.4rem, 3.6rem);
+		}
+	}
+	
+	article {
+	
+	ul {
+		margin-bottom: 2rem;
+		
+		@include media($breakpoint-desktop) {
+			margin-bottom: 3rem;
+		}
+		
+		li {
+			@include font(1.2rem, 1.6rem);
+			padding-left: 1.4rem;
+			position: relative;
+			font-family: $font-light;
+			margin-bottom: .8rem;
+			
+			@include media($breakpoint-desktop) {
+				@include font(1.8rem, 3.6rem);
+				padding-left: 1.8rem;
+				margin-bottom: 0;
+			}
+			
+			&:before {
+				@include size(.4rem);
+				position: absolute;
+				top: .5rem;
+				left: 0;
+				display: block;
+				background: $color-brand;
+				border-radius: 50%;
+				content: "";
+				
+				@include media($breakpoint-desktop) {
+					top: 1.5rem;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	}
+	
+	.is-active {
+		.jobs-info__content {
+			display: block;
+		}		
+		
+		.jobs-info__vacancy-title {
+			i {
+				transform: translateY(-50%) rotate(-90deg);
+			}
+		}
+	}
+
+}

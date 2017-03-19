@@ -11,3 +11,26 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+
+.content__button {
+		@include font(1.2rem, 1.4rem);
+		display: inline-block;
+		font-family: $font-bold;
+		color: #fff;
+		padding: 2.2rem 4rem 2rem;
+		text-transform: uppercase;    
+		background: {
+				position: 50% 50%;
+				size: contain;
+				repeat: no-repeat;
+				image: url(../img/general/button-lead.png);
+		}
+
+		@include media($breakpoint-desktop) {
+				@include font(1.6rem, 1.8rem);
+				padding: 2.6rem 6rem 2.2rem;
+		}
+
+
+}

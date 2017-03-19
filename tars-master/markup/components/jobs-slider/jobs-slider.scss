@@ -1,0 +1,139 @@
+.jobs-slider {
+	position: relative;
+	background-image: -moz-linear-gradient( 90deg, rgb(219,221,223) 0%, rgb(247,247,247) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(219,221,223) 0%, rgb(247,247,247) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(219,221,223) 0%, rgb(247,247,247) 100%);
+	
+	
+
+    
+    &__bg-r {
+			
+			display: none;
+			
+        @include media(min-width 1700px) {
+            position: absolute;
+						display: block;
+            bottom: -6.7rem;
+            right: 10rem;
+            img {
+                width: auto;
+                vertical-align: top;
+            }
+        }
+    }
+	    
+    &__bg-l {
+			
+			display: none;
+			
+        @include media(min-width 1700px) {
+            position: absolute;
+						display: block;
+            bottom: -6.4rem;
+            left: 10.6rem;
+            img {
+                width: auto;
+                vertical-align: top;
+            }
+        }
+    }
+	
+	
+	
+	div,
+	a {
+		outline: none;
+	}
+	
+	
+	&__box {
+		margin: 0 1.5rem;
+	}
+	
+	&__item {
+		@include media($breakpoint-desktop) {
+			@include grid();
+			margin: 0;
+		}
+	}
+	
+	&__image {
+			display: none;
+			@include media($breakpoint-desktop) {
+				display: block;
+				@include grid-columns(1, 4);
+		}
+		
+			img {
+
+					display: block;
+					margin: 0 auto;
+					vertical-align: top;
+					max-width: 100%;
+			}
+	}
+		
+	&__content {
+		@include media($breakpoint-desktop) {
+			@include grid-columns(3, 4);
+			align-self: center;
+		}
+		
+		
+		p {
+			@include font(1.2rem, 1.8rem);
+			font-family: $font-light;
+			padding: 1rem;
+			
+			@include media($breakpoint-mobile) {
+				margin: 0;
+			}
+			@include media($breakpoint-desktop) {
+				@include font(2.4rem, 3.6rem);
+				padding: 0;
+				padding-right: 9rem;
+			}
+			
+			
+		}
+		
+		.signature {
+			display: block;
+			font-family: $font-bold;
+			text-align: right;
+		}
+		
+	}
+	
+	.slick-nav {
+		@include font(3.2rem, 3.2rem);
+		position: absolute;
+		display: block;
+		top: 50%;
+		transform: translate(0, -50%);
+		color: $color-brand;
+		z-index: 9999;
+		
+		&:hover {
+			opacity: .8;
+		}
+	}
+	
+	.slick-prev {
+		left: -2rem;
+		@include media($breakpoint-desktop) {
+			left: -1rem;
+		}
+	}
+	.slick-next {
+		right: -2rem;
+		@include media($breakpoint-desktop) {
+			right: -1rem;
+		}
+	}
+	
+	
+	
+	
+}
