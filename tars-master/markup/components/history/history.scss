@@ -1,4 +1,5 @@
 .history {
+    position: relative;
 
     p {
     @include media($breakpoint-desktop) {
@@ -16,37 +17,61 @@
         }
     }
     
+    &__years-box {
+        
+        &:before {
+            display: none;
+            @include media($breakpoint-desktop) {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 50%; 
+                transform: translate(17px, 0);
+                width: 1px;
+                height: 100%;
+                content: '';
+                background: #e7e8e9;
+            }
+        }
+
+        
+    }
+    
     &__years-grid {
-        display: flex;
-        flex-direction: column;
+        @include grid();
+        position: relative;
+        align-items: center;
+        
+        &:before {
+            display: none;
+            @include media($breakpoint-desktop) {
+                @include size(2.2rem);
+                position: absolute;
+                display: block;
+                top: 18px;
+                left: 50%; 
+                transform: translate(7px, 0);
+                border-radius: 50%;
+                border: 6px solid #f7f7f7;
+                position: absolute;
+                display: block;
+                background: #e7e8e9;
+                content: '';
+            }
+        }
         
         
         @include media($breakpoint-desktop) {
-            @include grid();
+
             flex-direction: row;
             margin-bottom: 4rem;
             padding-left: 13rem;
-            align-items: center;
             padding-right: 9.5rem;
         }
         
         
         @include media($breakpoint-mobile) {
-            margin-bottom: 2rem;
-            
-        
-            &:nth-child(2n) {
-
-                .history__years-item--right {
-                    order: 1;
-                }
-
-                .history__years-item--left {
-                    order: 2;
-                }
-
-            }
-            
+            margin-bottom: 2rem;     
             
         }
         
@@ -57,11 +82,9 @@
         
     }
     
-    &__years-item {
-                
-        @include media($breakpoint-desktop) {
-            @include grid-columns(1, 2);
-        }
+    &__years-item {             
+        @include grid-columns(1, 2);
+
         
         
         &--right {
@@ -101,9 +124,6 @@
             repeat: no-repeat;
         }
         
-        @include media($breakpoint-mobile) {   
-            order: 1;
-        }
         
         &--2025 {
             background-image: url(../img/general/hist1.png);
@@ -163,11 +183,6 @@
         @include media($breakpoint-desktop) {   
             @include font(1.6rem, 2.4rem);
         } 
-        
-        @include media($breakpoint-mobile) {
-            margin-top: 1rem;
-            text-align: left
-        }
     }
     
     
@@ -210,14 +225,18 @@
     }
     
     &__about-image {
+        min-height: 1px;
+        
         @include media($breakpoint-desktop) {
             width: 50%;
+        }
+        
             img {
                 width: 100%;
                 height: auto;
                 vertical-align: top;
+                min-height: 1px;
             }
-        }
         
         @include media($breakpoint-mobile) {
             order: 1;

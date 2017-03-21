@@ -54,6 +54,10 @@
 			flex-wrap: wrap;
 		}
 		
+
+      
+      
+		
 	}
 
 	
@@ -233,6 +237,16 @@
 			display: inline-block;
 			vertical-align: top;
 		}
+		
+		&--about {
+			@include media($breakpoint-mobile) {
+				@include grid-columns(1, 2);
+			}
+		}
+		
+		
+		
+		
 	}
 	
 	&__title {
