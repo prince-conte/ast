@@ -1,0 +1,45 @@
+.main-left {
+    display: none;
+    @include media($breakpoint-desktop) {
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: 41rem;
+        z-index: -1;
+    }
+    
+    img {
+        width: auto;
+        height: auto;
+        vertical-align: top;
+    }
+    
+    &--bg2 {
+        img {
+            max-width: 640px;
+        }
+    }
+}
+
+.main-right {
+    display: none;
+    @include media($breakpoint-desktop) {
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: 41rem;
+        z-index: -1;
+    }
+    
+    img {
+        width: auto;
+        height: auto;
+        vertical-align: top;
+    }
+    
+    &--bg2 {
+        img {
+            max-width: 640px;
+        }
+    }
+}

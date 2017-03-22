@@ -1,6 +1,9 @@
 // Vendors
 require libraries/jquery.js
+require libraries/jmodernizer-custom.js
 require plugins/slick.js
+require plugins/masonry.js
+require plugins/imagesLoaded.js
 
 
 

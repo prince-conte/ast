@@ -13,6 +13,7 @@ html(class="no-js", lang="ru")
     include ../components/social-link/social-link
     include ../components/search-block/search-block
     include ../components/page-news/page-news
+    include ../components/mainbg/mainbg
     include ../components/footer/footer
 
     head
@@ -21,6 +22,7 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         +header-min()
         main.page__wrapper
+            +mainbg()
             +news-services()
             +page-news()
         +footer()

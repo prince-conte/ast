@@ -26,12 +26,16 @@ body {
 footer {
   margin-top: auto;
 }
+.page-wrapper {
+    position: relative;
+}
 
 .section-box {
 		margin: 4rem 0;
 	
 		@include media($breakpoint-desktop) {
 			margin: 5rem 0;
+        z-index: 99;
 		}
 	
 	&:last-child {	

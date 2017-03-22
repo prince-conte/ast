@@ -1,0 +1,52 @@
+.photo-grid {
+    display: block;
+    
+    @include media($breakpoint-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .grid-sizer {
+        @include media($breakpoint-desktop) { 
+            width: 20%;
+        }
+    }
+    
+    &__item {
+        
+        
+        @include media($breakpoint-mobile) {
+            position: relative !important; // for masonry
+            width: 100% !important; // for masonry
+            top: auto !important; // for masonry
+            left: auto !important; // for masonry
+            right: auto !important; // for masonry
+        }
+                
+        @include media($breakpoint-desktop) {
+            width: 20%;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+        
+        &--big {
+            
+        
+        @include media($breakpoint-mobile) {
+            position: relative !important; // for masonry
+            width: 100% !important; // for masonry
+            top: auto !important; // for masonry
+            left: auto !important; // for masonry
+            right: auto !important; // for masonry
+        }
+            
+            @include media($breakpoint-desktop) {
+                width: 40%;
+            }
+        }
+    }
+}
