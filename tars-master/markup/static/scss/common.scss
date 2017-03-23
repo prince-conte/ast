@@ -51,7 +51,6 @@ footer {
 // Links
 a {
   @include transition(all $transition-duration-base);
-  @include hover(color, $color-base);
   color: $color-brand;
   text-decoration: none;
   outline: none;

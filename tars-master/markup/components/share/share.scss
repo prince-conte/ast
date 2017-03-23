@@ -1,0 +1,161 @@
+.share {
+    align-content: center;
+    margin: 5rem 0 2rem;
+    
+    @include media($breakpoint-desktop) {
+        display: flex; 
+    }
+    
+    &__title {
+        @include font(1.2rem, 1.4rem);
+        font-family: $font-light;
+        color: #888888;    
+        
+        @include media($breakpoint-mobile) {
+            margin: 4rem 0;
+        }        
+        @include media($breakpoint-desktop) {
+            position: relative;
+            top: -.4rem;
+            @include font(1.6rem, 1.8rem);
+            margin-right: 3rem;
+        }
+    }
+
+
+    &__box {
+        position: relative;
+        max-width: 161px;
+        
+        
+        &:before {
+            position: absolute; display: block;
+            top: -26px;
+            left: -9px;
+            width: 38px;
+            height: 43px;
+            z-index: 999;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/share-before.png);
+            }
+        }
+               
+        &:after {
+            position: absolute; display: block;
+            bottom: -8px;
+            right: -13px;
+            width: 49px;
+            height: 25px;
+            content: '';
+            background: {
+                size: contain;
+                position: 50% 50%;
+                image: url(../img/general/share-after.png);
+            }
+        }
+        
+        
+    }
+    
+
+        &__item {
+            @include font(2rem, 1.3rem);
+            position: relative;
+            padding: 2rem 2.4rem;
+            color: #fff;
+
+            i {
+                position: relative;
+            }
+
+
+            &--vk {
+                &:hover {
+                    color: $color-brand;
+
+                    &:before {
+                        background-image: url(../img/general/soc1-h.png);
+                    }
+                }
+            }
+
+
+            &--vk:before {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 74px;
+                height: 52px;
+                content: '';
+                background: {
+                    size: contain;
+                    position: 50% 50%;
+                    image: url(../img/general/soc1.png);
+                }
+            }         
+
+            &--facebook {
+                margin-left: -24px;
+
+                &:hover {
+                    color: $color-brand;
+
+                    &:before {
+                        background-image: url(../img/general/soc2-h.png);
+                    }
+                }
+            }
+
+            &--facebook:before {
+                position: absolute;
+                display: block;
+                top: 11px;
+                left: 0;
+                width: 74px;
+                height: 52px;
+                content: '';
+                background: {
+                    size: contain;
+                    position: 50% 50%;
+                    image: url(../img/general/soc2.png);
+                }
+            }
+
+
+            &--twitter {
+                margin-left: -19px;
+
+                &:hover {
+                    color: #4ebff1;
+
+                    &:before {
+                        background-image: url(../img/general/share-tvitter-h.png);
+                    }
+                }
+            }
+
+            &--twitter:before {
+                position: absolute;
+                display: block;
+                top: 0px;
+                left: -4px;
+                width: 75px;
+                height: 52px;
+                content: '';
+                background: {
+                    size: contain;
+                    position: 50% 50%;
+                    image: url(../img/general/share-tvitter.png);
+                }
+            }
+
+
+        }
+
+
+    
+}
