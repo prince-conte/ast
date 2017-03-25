@@ -1,0 +1,209 @@
+.brand-info {
+	
+	&__title {
+		margin: 1rem 0 1rem;
+		color: $color-title;
+
+		@include media($breakpoint-desktop) {
+			margin: 0 0 2rem;
+		}
+	}
+	
+	&__card {
+		
+		@include media($breakpoint-desktop) {
+			@include grid();	
+		}
+	}
+	
+	
+	&__card-info {
+		
+		@include media($breakpoint-desktop) {
+			@include grid-columns(6.8, 8);	
+		}	
+	}
+	
+	&__card-info-body {	
+		padding: 2rem 1.5rem;
+		background: #fff;
+		
+		@include media($breakpoint-desktop) {
+			display: flex;
+			padding: 4rem 3rem;
+		}
+		
+	}
+	
+	
+	
+	&__card-info-content {
+		
+		@include media($breakpoint-desktop) {
+		width: 60rem;
+			margin-left: 3rem;
+		}
+		
+		
+		p {
+			@include font(1.2rem, 1.6rem);
+			font-family: $font-light;
+			
+			@include media($breakpoint-desktop) {
+				@include font(1.8rem, 2.4rem);
+			}
+		}
+		
+	}
+	
+		
+	&__card-info-slider {
+		
+		@include media($breakpoint-desktop) {
+		width: 25.5rem;
+		}
+	}
+	
+	&__card-info-slider-screen {
+		border: solid 1px #efeff0;
+	}
+		
+	&__card-info-slider-screen-item {
+		padding: 2rem;
+		
+		
+		@include media($breakpoint-desktop) {
+			padding: 3rem;
+		}
+		
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: auto;
+		}
+	
+	}
+	
+	&__card-info-slider-screen-nav {
+		margin-left: -0.725rem;
+		margin-right: -0.725rem;
+		margin-top: 1.5rem;	
+		
+		
+		@include media($breakpoint-mobile) {
+			margin-bottom: 2rem;
+		}
+		
+		
+	}
+	
+		
+	&__card-info-slider-screen-nav-item {
+		@include grid-columns(1, 3);
+		margin: 0 0.725rem;
+		border: solid 1px #efeff0;
+		padding: 1rem;
+		outline: none;
+		
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+		
+	&__card-slider {
+		
+		height: 35.85rem;
+		
+		@include media($breakpoint-mobile) {
+			margin-top: 3rem;
+		}			
+		@include media($breakpoint-desktop) {
+			@include grid-columns(1.2, 8);	
+		}	
+	}
+	
+	&__card-slider-grid {
+		
+	}
+		
+	&__card-slider-grid-item {
+		position: relative;
+		height: 106px !important; // for slick
+		margin: 0 0 1.35rem;
+
+	}
+			
+	&__card-slider-grid-item-body {
+		@include size(100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		padding: 1rem;
+		background: #fff;
+		
+		img {
+			align-self: center;
+			vertical-align: top;
+			min-height: 1px;
+			margin: 0 auto;
+		}
+	}
+	
+	
+	
+	
+	
+   
+	.slick-nav {
+    position: absolute;
+    width: 2rem;
+    height: 5rem;
+		left: 50%;
+		margin-left: -1rem;
+    cursor: pointer;
+    z-index: 9999;
+    background: {
+      position: 50% 50%;
+      size: contain;
+      image: url(../img/general/prev.png);
+      repeat: no-repeat;
+    }
+
+    &:hover {
+      background-image: url(../img/general/prev-h.png);
+    }
+    }
+
+
+    .slick-prev {
+			top: -3.3rem;
+			transform: rotate(90deg);
+
+			@include media($breakpoint-desktop) {
+				top: -3.3rem;
+			}
+			
+    }
+
+    .slick-next {
+			bottom: -2rem;
+			transform: rotate(270deg);
+    }
+
+	
+	
+	
+	
+	
+}

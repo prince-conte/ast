@@ -1,0 +1,116 @@
+.brand-product-slider {
+	&__title {
+		margin: 1rem 0 1rem;
+		color: $color-title;
+
+		@include media($breakpoint-desktop) {
+			margin-bottom: 3rem;
+		}
+	}
+	
+	
+	&__grid {
+		@include grid();	
+	}
+	
+	&__item {
+		@include media($breakpoint-desktop) {
+			@include grid-columns(1, 4);	
+		}
+	}
+	
+	&__item-body {
+		background: #fff;
+		
+		img {
+			vertical-align: top;
+			min-height: 1px;
+			margin: 0 auto;
+		}
+	}
+	
+	
+	&__item-title {
+		@include font(1.4rem, 1.8rem);
+		color: $color-brand;
+		margin-bottom: 1rem;
+		text-align: center;
+		
+		@include media($breakpoint-desktop) {
+			@include font(1.8rem, 2.4rem);	
+			margin-bottom: 2rem
+		}
+		
+	}	
+	
+	
+	&__block-three-content {
+		position: relative;
+		align-items: stretch;
+		width: 100%;	
+		background: #fff;
+	}
+	
+	&__options {
+		@include grid();
+		padding: 0 2rem 2rem;
+	}
+		
+	&__options-item {
+		@include grid-columns(1,2);
+		@include font(.8rem, 1.2rem);
+		
+		@include media($breakpoint-desktop) { 
+			@include font(1.3rem, 2.4rem);
+		}
+		
+		
+		
+		&--title {
+			color: #888888;
+			text-align: right;
+		}
+				
+		&--value {
+			color: $color-base;
+			text-align: left;
+		}
+		
+	}
+   
+    .slick-nav {
+    position: absolute;
+    top: 0%;
+    width: 2rem;
+    height: 100%;
+    cursor: pointer;
+    z-index: 9999;
+    background: {
+      position: 50% 50%;
+      size: contain;
+      image: url(../img/general/prev.png);
+      repeat: no-repeat;
+      color: #f7f7f7;
+    }
+
+    &:hover {
+      background-image: url(../img/general/prev-h.png);
+    }
+    }
+
+
+    .slick-prev {
+			left: -.5rem;
+
+			@include media($breakpoint-desktop) {
+				left: -.5rem;
+			}
+			
+    }
+
+    .slick-next {
+			right: -.5rem;
+			transform: rotate(180deg);
+    }
+
+}
