@@ -29,10 +29,39 @@
         } 
         
 
-        &:nth-child(2) {
+        &:nth-child(2),
+        &:nth-child(4), 
+        &:nth-child(6) {
             .clients__title {
                 flex-direction: row;
                 text-align: left;
+                
+                .clients__description:before {
+                    right: auto;
+                    left: 0;
+                    -webkit-transform: skew(20deg); 
+                    -moz-transform: skew(20deg); 
+                    -o-transform: skew(20deg);
+                    transform: skew(20deg);
+                }
+            }
+        }        
+        
+        
+        &--one-line {
+            
+            @include media($breakpoint-desktop) {
+                width: 25%;
+            }
+            
+            .clients__title {
+                flex-direction: row;
+                text-align: left;
+                 padding: 1rem;    
+                
+                @include media($breakpoint-desktop) {
+                    padding: 1.7rem;    
+                }
                 
                 .clients__description:before {
                     right: auto;

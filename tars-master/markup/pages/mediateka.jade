@@ -1,0 +1,38 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/example/example
+    include ../components/index-slider/index-slider
+    include ../components/index-about/index-about
+    include ../components/production-services/production-services
+    include ../components/index-partners/index-partners
+    include ../components/index-news/index-news
+    include ../components/news-services/news-services
+    include ../components/header-min/header-min
+    include ../components/social-link/social-link
+    include ../components/news-services/news-services
+    include ../components/search-block/search-block
+    include ../components/mediateka/mediateka
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        +header-min()
+        main.page__wrapper
+            .main-left
+                img(src="static/img/general/mainbgpr-l.png" alt="bg")
+            .main-right
+                img(src="static/img/general/mainbgpr-r.png" alt="bg")
+                
+            +news-services()
+            +mediateka()
+        +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
