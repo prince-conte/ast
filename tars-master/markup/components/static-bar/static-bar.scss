@@ -1,0 +1,63 @@
+.static-bar {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-border;
+    padding: 1.2rem 0;
+    
+    
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 2.5rem;
+        
+        @include media($breakpoint-desktop) {
+            margin-right: 6.5rem;
+        }
+        
+        i {
+            position: relative;
+            @include font(1.6rem, 1.6rem);
+            margin-right: .8rem;
+            color: #fcb821;
+            top: -.1rem;
+        }
+        
+        span {
+            @include font(1.1rem, 1.1rem);
+            position: relative;
+            top: -.1rem;
+            display: inline-block;
+            color: #888888;
+            align-self: center;
+            
+        }
+        
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+            
+    }
+    
+    &__social {
+        display: inline-flex;
+        
+        a {
+            @include font(1.6rem, 1.6rem);
+            margin-left: 1.5rem;
+        }
+        
+        .mdi-vk {
+            color: #d6df21;
+        }
+        .mdi-facebook {
+            color: #24aae1;
+        }
+        .mdi-twitter {
+            color: #d91a5b;
+        }
+    }
+    
+
+}
