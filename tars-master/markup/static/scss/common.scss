@@ -20,7 +20,7 @@ body {
   background: #f7f7f7;
   font-size: 62.5%;
   color: $color-base;
-  font-family: $font-base;
+  font-family: $font-light;
 }
 
 footer {
@@ -58,9 +58,9 @@ a {
 
 // B
 b {
-  font: {
-    weight: 700;
-  }
+    font-family: $font-bold;
+    font-weight: 400;
+
 }
 
 // Blockquote

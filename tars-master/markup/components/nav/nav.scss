@@ -92,7 +92,8 @@
 				}
 		}
 		
-		&__tab-menu-item {			
+		&__tab-menu-item {
+        font-family: $font-base;
 				@include media($breakpoint-mobile) {
 						display: none;
 				}
