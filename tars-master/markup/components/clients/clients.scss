@@ -6,6 +6,7 @@
     
     &__item {
         position: relative;
+        min-height: 1px;
         
         @include media($breakpoint-mobile) {
             display: block;
@@ -18,6 +19,7 @@
             width: 100%;
             height: auto;
             vertical-align: top;
+            min-height: 1px;
         }
         
         &:hover {
@@ -60,7 +62,7 @@
                  padding: 1rem;    
                 
                 @include media($breakpoint-desktop) {
-                    padding: 1.7rem;    
+                    padding: 4rem;    
                 }
                 
                 .clients__description:before {

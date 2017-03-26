@@ -368,6 +368,12 @@
 						margin-right: 3rem;
 					}
 				}
+        				
+				&:first-last {
+					@include media($breakpoint-desktop) { 
+						margin-right: 0;
+					}
+				}
         
         @include media($breakpoint-mobile) {
 					display: block;	
