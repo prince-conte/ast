@@ -1,0 +1,24 @@
+.for-clients {
+    
+    @include media($breakpoint-desktop) {
+     margin-top: 4rem;   
+    }
+	
+	&__title {
+		margin: 1rem 0 1rem;
+		color: $color-title;
+
+		@include media($breakpoint-desktop) {
+			margin: 0 0 2rem;
+		}
+	}
+    
+    
+    p {
+        b {
+            font-family: $font-base;
+            color: $color-brand;            
+        }
+    }
+    
+}

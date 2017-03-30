@@ -1,0 +1,95 @@
+.in-contact {
+    
+    .in-contacts-button {
+        display: inline-block;
+        margin: 0 auto;
+        
+        
+        
+        @include media($breakpoint-desktop) {
+            align-self: flex-start;
+            min-width: 256px;
+            margin-left: 6rem;
+        }
+        
+    }
+
+    &__title {
+        margin: 1rem 0 1rem;
+        color: $color-title;
+
+        @include media($breakpoint-desktop) {
+            margin: 0 0 2rem;
+        }
+    }
+
+    
+    &__box {
+        position: relative;
+        
+        p {
+            @include font(1.4rem, 1.6rem);
+            margin: 0;
+            font-family: $font-base;
+            margin-bottom: 1rem;
+            
+            @include media($breakpoint-desktop) {
+             @include font(2.4rem, 3.2rem); 
+                margin-bottom: 0;
+            }
+            
+        }
+        
+    
+    &:before {
+        @include media($breakpoint-desktop) {
+            position: absolute;
+            width: 148px;
+            height: 142px;
+            top: 0;
+            left: -9rem;   
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            background-image: url(../img/general/in-contacts-before.png);
+            content: '';
+      
+        }
+        
+    }     
+           
+    
+    &:after {
+        @include media($breakpoint-desktop) {
+            position: absolute;
+            width: 176px;
+            height: 118px;
+            top: 0;
+            right: -6.6rem;   
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 10;
+            background-image: url(../img/general/in-contacts-after.png);
+            content: '';
+      
+        }
+        
+    }     
+        
+    }
+    
+    &__ph {
+        padding: 1.5rem 1rem;
+        background: #fff;
+        z-index: 9;
+        
+        @include media($breakpoint-desktop) {
+            @include display(flex);
+            padding: 3.5rem 3rem;
+        }
+    }
+
+    
+}

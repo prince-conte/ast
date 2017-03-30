@@ -141,4 +141,30 @@
         
     }
     
+    
+    &--for-clients {
+        margin-bottom: 0 !important;
+        
+        .clients__title {
+            text-align: left !important;
+            flex-direction: row !important;
+            
+            @include media($breakpoint-desktop) {
+                padding: 4.5rem;
+            }
+                
+        }
+        
+        .clients__description:before {
+            right: auto;
+            left: 0;
+            -webkit-transform: skew(20deg); 
+            -moz-transform: skew(20deg); 
+            -o-transform: skew(20deg);
+            transform: skew(20deg);
+        }
+        
+        
+    }
+    
 }

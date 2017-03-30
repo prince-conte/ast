@@ -120,6 +120,7 @@
     
     &__name {
         color: $color-brand;
+        font-family: $font-base;
         @include font(1rem, 1.4rem);
         
         @include media($breakpoint-desktop) {
@@ -176,5 +177,53 @@
 			transform: rotate(180deg);
     }
 
-
+    &__write {
+        position: relative;
+        display: inline-block;
+        transition: .2s;
+        
+        &:hover {
+            opacity: .95;
+        }
+        
+        img {
+            vertical-align: top;
+            height: auto;
+            width: 12rem;
+            
+            @include media($breakpoint-desktop) {
+                width: auto;
+            }
+        }
+       
+        span {
+            @include font(1.2rem, 1.2rem);
+            
+            @include media($breakpoint-desktop) {
+                @include font(1.7rem, 1.7rem);
+            }
+            @include align-self(center);
+            color: #fff;
+        }  
+        .content {
+            @include size(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include display(flex);
+            @include justify-content(center);
+            @include align-items(center);
+        }
+    
+    }
+    
+    
+    &--for-clients {
+        margin-top: 2rem;
+        
+        @include media($breakpoint-desktop) {
+            margin-top: 4rem;
+        }
+    }
+    
 }
