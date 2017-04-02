@@ -1,0 +1,73 @@
+.contact-form {
+
+    &__title {
+        margin: 1rem 0 1rem;
+        color: $color-title;
+
+        @include media($breakpoint-desktop) {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    
+    &__box {
+        padding: 1.5rem 1rem;
+        background: #fff;
+        
+        @include media($breakpoint-desktop) {
+            padding: 4rem 3rem;    
+        }
+    }
+    
+    &__sub-title {
+        @include font(1.4rem, 1.6rem);
+        color: $color-base;
+        font-family: $font-base;
+        text-transform: none;
+        margin-bottom: 1.5rem;
+        
+        @include media($breakpoint-desktop) {
+            @include font(2.4rem, 3.6rem);  
+            margin-bottom: 3rem;
+        }
+        
+    }
+    
+    &__button {
+        margin-top: 2rem;
+        
+        @include media($breakpoint-mobile) {
+            @include display(flex);
+            @include justify-content(center);
+        }  
+        
+        @include media($breakpoint-desktop) {
+            @include display(flex);
+            @include justify-content(flex-end);
+        }
+        
+        .in-contacts-button {
+            
+            @include media($breakpoint-desktop) {
+                &:not(:first-child) {
+                    margin-left: 2rem;
+                }
+                
+            }
+                          
+            @include media($breakpoint-mobile) {
+                font-size: 1rem;
+                
+                &:not(:first-child) {
+                    margin-left: 1rem;
+                }
+            }
+                
+                
+            
+        }
+        
+    }
+    
+    
+}

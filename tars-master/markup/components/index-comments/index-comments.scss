@@ -222,7 +222,8 @@
         margin-top: 2rem;
         
         @include media($breakpoint-desktop) {
-            margin-top: 4rem;
+					padding-top: 0;
+          margin-top: 4rem;
         }
     }
     

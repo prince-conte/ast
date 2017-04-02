@@ -19,6 +19,9 @@
         
         @include media($breakpoint-desktop) {
             margin-bottom: 3rem   
+        }        
+        @include media($breakpoint-mobile) {
+            height: auto !important;
         }
     }
         
@@ -26,6 +29,59 @@
         vertical-align: top;
         min-height: 1px;
     }
+    
+    
+    &__box-navigate {
+        display: flex;
+        justify-content: flex-start;
+        background: #fff;
+        
+    .is-active {
+        color: $color-base;
+        background: #fff;
+    } 
+        
+    }
+        
+    &__box-navigate-item {
+        @include font(1.1rem, 1.1rem);
+        text-transform: uppercase;
+        color: $color-base;
+        font-family: $font-bold;
+        text-align: center;
+        border-top: 5px solid;
+        padding: 1rem;
+        
+        @include media($breakpoint-desktop) {
+            @include font(1.3rem, 1.3rem);
+            padding: 1.5rem 1rem 1.5rem;
+            min-width: 19rem;
+        }
+        
+        
+        &--one {
+            border-color: #f7931d;
+            background: #f7931d;
+            color: #fff;
+        }
+               
+        &--two {
+            border-color: $color-brand;
+            background: $color-brand;
+            color: #fff;
+        }
+                       
+        &--three {
+            border-color: $color-brand2;
+            background: $color-brand2;
+            color: #fff;
+        }
+                              
+
+        
+        
+    }
+    
     
     
     &__box {
@@ -37,6 +93,15 @@
             margin-left: -1.5rem;
             margin-right: -1.5rem;
         }
+        
+        
+    &--about-drop {
+        display: none;
+    } 
+        
+
+        
+        
     }
        
     &__title {
@@ -45,6 +110,15 @@
         
         @include media($breakpoint-desktop) {
             margin-bottom: 0rem;
+        }
+        
+        
+        &--about-title {
+            margin-bottom: 1.5rem;
+            
+            @include media($breakpoint-desktop) {
+                margin-bottom: 3rem;
+            }
         }
     }
     
@@ -105,6 +179,12 @@
         
         }
 
+    }
+    
+
+    
+    .is-active {
+        display: block;
     }
     
     

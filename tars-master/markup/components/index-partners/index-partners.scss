@@ -17,8 +17,10 @@
 	&__item {
 		margin: 0 1rem;
 		outline: none !important; // for slick
+      text-align: center;
 		
 		img {
+      display: inline-block;
 			transition: .2s;
 			filter: grayscale(100%); 
 		}

@@ -1,0 +1,15 @@
+.about-video {
+    
+    iframe {
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+        
+        @include media($breakpoint-desktop) {
+            margin-bottom: 3rem   
+        }        
+        @include media($breakpoint-mobile) {
+            height: auto !important;
+        }
+    } 
+    
+}

@@ -1,4 +1,4 @@
-$('.index-partners__grid').slick({
+$('.js-index-partners__grid').slick({
   slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,

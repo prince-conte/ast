@@ -4,3 +4,52 @@ button,
 select {
     outline: none;
 }
+
+
+input,
+textarea {
+    @include font(1.2rem, 1.2rem);
+    padding: 1rem 1rem .8rem;
+    background: #efeff0;
+    border: 0;
+    
+    @include media($breakpoint-desktop) {
+        padding: 2rem;
+    } 
+    
+    
+    @include placeholder {
+        color: #939495;
+    }
+    
+}
+
+textarea {
+    @include font(1.2rem, 1.4rem);
+    height: 12rem;
+    resize: none;
+}
+
+.input-block {
+    margin-bottom: 1rem;
+    
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.form-input-grid {
+    @include media($breakpoint-desktop) {
+        @include grid();
+    }
+    
+    .input-block {
+        @include media($breakpoint-desktop) {
+            @include grid-columns(1, 2);
+        }
+    }
+    
+}

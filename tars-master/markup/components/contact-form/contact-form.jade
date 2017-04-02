@@ -1,0 +1,38 @@
+mixin contact-form()
+
+    section.section-box.contact-form
+        .container
+            h2.contact-form__title Если Вы не нашли интересующую информацию - Свяжитесь с нами
+            
+            form.contact-form__box
+                h3.contact-form__sub-title Обратная связь
+                
+                .form-input-grid           
+                    .input-block
+                        input(placeholder="Имя")               
+                    .input-block
+                        input(placeholder="Телефон")
+                    
+                            
+                .form-input-grid           
+                    .input-block
+                        input(placeholder="E-mail")               
+                    .input-block
+                        input(placeholder="Компания")
+                        
+                .input-block
+                    textarea(placeholder="Введите текст обращения")
+                    
+                .contact-form__button
+
+                    a.in-contacts-button(href="#")
+                        img(src="static/img/general/infile.png" alt="button")
+                        .content
+                            span Прикрепить файл
+
+
+                    a.in-contacts-button(href="#")
+                        img(src="static/img/general/in-mes.png" alt="button")
+                        .content
+                            span Отправить
+

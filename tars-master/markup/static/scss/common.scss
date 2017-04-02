@@ -180,6 +180,12 @@ ul {
         &:not(:first-child) {
             margin-top: 2.5rem;
         }
+			
+				@include media($breakpoint-desktop) {
+						padding-left: 3rem;  
+				}
+
+			
         
         &:before {
             @include size(.2rem);
@@ -193,7 +199,7 @@ ul {
             
             @include media($breakpoint-desktop) {
                 top: .9rem;
-                padding-left: 3rem;
+                
             }
             
         }
