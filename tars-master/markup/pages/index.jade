@@ -13,6 +13,7 @@ html(class="no-js", lang="ru")
     include ../components/social-link/social-link
     include ../components/search-block/search-block
     include ../components/footer/footer
+    include ../components/mobile-menu/mobile-menu
 
     head
         +head(head.defaults)
@@ -28,6 +29,7 @@ html(class="no-js", lang="ru")
             +index-comments()
                 
         +footer()
+        +mobile-menu()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

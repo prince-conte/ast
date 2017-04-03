@@ -1,0 +1,37 @@
+mixin mobile-menu()
+
+    .mobile-menu.js-mobile-menu
+        .container
+            ul.mobile-menu__box
+            
+           
+                li.is-active
+                    a(href="#") О компании
+                                
+                li
+                    a(href="#") Новости
+                                
+                li
+                    a(href="#") Ассортимент
+                                
+                li
+                    a(href="#") b2b
+                                
+                li
+                    a(href="#") b2c
+                                                   
+                li
+                    a(href="#") Контакты
+                    
+            
+            .mobile-menu__footer              
+
+                +social-link()
+                .mobile-menu__form-search
+                    +search-block()
+                    
+                    
+    .menu-close.js-menu-close
+        span
+
+
