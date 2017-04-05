@@ -36,7 +36,7 @@
         height: 100%;
         top: 0px;
         left: 0px;
-        animation: menu-animation .1s linear .5s 1 alternate forwards;
+        animation: menu-animation .1s linear .2s 1 alternate forwards;
         opacity: 0;
     }
 
@@ -49,7 +49,7 @@
         transform: translate(0, -40%);
         color: #fff;
         text-align: right;
-        animation: menu-animation .1s linear 1s 1 alternate forwards;
+        animation: menu-animation .1s linear .2s 1 alternate forwards;
         opacity: 0;
     } 
     
