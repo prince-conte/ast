@@ -5,7 +5,9 @@ mixin index-news()
 			h2.index-news__title Новости
 			.index-news__grid
 				a.index-news__block-one(href="#")
-					img(src="static/img/general/vine.jpg" alt="vine")
+					.index-news__one-image-block
+						img(src="static/img/general/vine.jpg" alt="vine")
+						.index-news__one-image-bg(style="background-image: url(static/img/general/vine.jpg)")
 					.index-news__tag.index-news__tag--one новости
 					.index-news__block-one-content
 						.index-news__one-title Beaujolais Nouveau от дома <br> Trenel в России
@@ -22,7 +24,9 @@ mixin index-news()
 				a.index-news__block-two(href="#")
 					.index-news__tag.index-news__tag--two Акция
 					.index-news__block-two-content
-						img(src="static/img/general/vine2.jpg" alt="vine")
+						.index-news__one-image-block
+							img(src="static/img/general/vine2.jpg" alt="vine")
+							.index-news__one-image-bg(style="background-image: url(static/img/general/vine2.jpg)")
 						.index-news__two-title Fruko Schulz Piña Colada – золотая медаль в Лондоне
 						.index-news__block-one-content.index-news__block-one-content--two
 							.index-news__statistics.index-news__statistics--two

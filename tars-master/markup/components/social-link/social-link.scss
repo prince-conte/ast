@@ -1,5 +1,6 @@
 .social-link {
     position: relative;
+    display: flex;
     margin: 5rem auto;
     max-width: 26.7rem;
     
@@ -51,6 +52,7 @@
         
         i {
             position: relative;
+            top: 6px;
         }
         
         

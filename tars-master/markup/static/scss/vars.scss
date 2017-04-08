@@ -13,10 +13,10 @@ $indent-base-mobile:  1rem;
 $indent-base-desktop: 3rem;
 
 // Breakpoints
-$breakpoint-mobile:  new-breakpoint(max-width 767px);
-$breakpoint-desktop: new-breakpoint(min-width 768px);
-//$breakpoint-mobile:  new-breakpoint(max-device-width 767px);
-//$breakpoint-desktop: new-breakpoint(min-device-width 768px);
+//$breakpoint-mobile:  new-breakpoint(max-width 767px);
+//$breakpoint-desktop: new-breakpoint(min-width 768px);
+$breakpoint-mobile:  new-breakpoint(max-device-width 767px);
+$breakpoint-desktop: new-breakpoint(min-device-width 768px);
 
 // Colors
 $color-brand: #d20d59;

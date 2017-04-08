@@ -1,16 +1,18 @@
 mixin contacts()
 
-    .contacts__fade
+    .contacts__fade.js-close-contect
     .contacts__mapy#mapy
+    
+    a.contacts__close-mapy(href="#") Показать контакты
 
-    .contacts__box
+    .contacts__box.js-close-contect
         .contacts__center-office
             .contacts__item <i class="mdi mdi-map-marker"></i> Россия, г. Москва,<br>Каширский проезд, д.23, стр. 4
-            .contacts__item <i class="mdi mdi-cellphone-iphone"></i> Россия, г. Москва,<br>Каширский проезд, д.23, стр. 4 <a href="#">Заказать обратный звонок</a>
+            .contacts__item <i class="mdi mdi-cellphone-iphone"></i> +7 (495) 411 53 40 <a href="#">Заказать обратный звонок</a>
             
+            a.contacts__stick.js-open-map(href="#")
     
-    
-    section.contacts__box.contacts__box--two
+    section.contacts__box.contacts__box--two.js-close-contect
         .container
             form.contact-form__box
                 h3.contact-form__sub-title Обратная связь
@@ -45,13 +47,13 @@ mixin contacts()
                             span Отправить
                             
                             
-    section.contacts__box.contacts__box--two
+    section.contacts__box.contacts__box--two.js-close-contect
         .container
             h2.contacts__title Контакты подразделений компании АСТ Интер
             .contacts__tabs-box
             
                 .contacts__tab
-                    .contacts__tab-box-body.typography
+                    .contacts__tab-box-body.contacts__tab-box-body--one.typography
                         .contacts__tab-title Отдел продаж:
                         p <b>Директор по продажам</b> - Зайцев Вадим (доб. 161)
                         p <b>Руководитель отдела HoReCa</b> - Казиев Акшин (доб.158)
@@ -60,7 +62,7 @@ mixin contacts()
 
             
                 .contacts__tab
-                    .contacts__tab-box-body.typography
+                    .contacts__tab-box-body.contacts__tab-box-body--two.typography
                         .contacts__tab-title Руководство:
                         p <b>Генеральный директор</b> - Рафаилов Леонид Соломонович
                         p <b>Зам. генерального директора</b> -<br>Мардахаев Зарахия Шамаилович
@@ -68,14 +70,14 @@ mixin contacts()
 
             
                 .contacts__tab
-                    .contacts__tab-box-body.typography
+                    .contacts__tab-box-body.contacts__tab-box-body--three.typography
                         .contacts__tab-title Отдел Импорта:
                         p <b>Директор по Импорту</b> - Савченко Андрей Васильевич (доб.361)
                         p <b>Зам. директора по Импорту</b> - Комаров Константин Николаевич (доб.360)
 
             
                 .contacts__tab
-                    .contacts__tab-box-body.typography
+                    .contacts__tab-box-body.contacts__tab-box-body--four.typography
                         .contacts__tab-title Отдел маркетинга:
                         p <b>Директор по маркетингу</b> - Ленская Анастасия (доб.146)
 

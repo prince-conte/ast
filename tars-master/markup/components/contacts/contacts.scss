@@ -33,6 +33,10 @@
         height: 100%;
         min-height: 50px;
         z-index: -2 !important; // for ym
+        
+        &--open {
+            z-index: 99 !important;
+        }
     }
    
     
@@ -71,20 +75,37 @@
             transform: rotate(45deg);
             content: '';
         } 
-        
-        &:after {
-            position: absolute;
-            width: 28px;
-            height: 35px;
-            display: block;
-            margin-left: -14px;
-            left: 50%;
-            bottom: -6rem;
-            background-image: url(../img/general/mapy.png);
-            content: '';
-        } 
     }
-    
+
+        
+    &__stick {
+        position: absolute;
+        width: 28px;
+        height: 35px;
+        display: block;
+        margin-left: -14px;
+        left: 50%;
+        bottom: -6rem;
+        background-image: url(../img/general/mapy.png);
+        
+        
+        &:before {
+            @include font(1.2rem, 1.2rem);
+            position: absolute;
+            left: 0;
+            bottom: -3rem;
+            transform: translate(-39%, 50%);
+            color: $color-base;
+            font-family: $font-bold;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            content: 'Смотреть на карте';
+        }
+        
+    }    
+
     
     &__item {
         @include font(1.4rem, 2rem);
@@ -124,7 +145,16 @@
             }
         }
         
-        
+        &--phone {
+            a {
+                @include font(1.2rem, 1.9rem);
+                font-family: $font-base;
+                
+                @include media($breakpoint-desktop) {
+                    @include font(2.4rem, 4.6rem);    
+                }
+            }
+        }
         
     }
     
@@ -142,11 +172,30 @@
         width: 100%;
         background: #fff;
         padding: 1rem;
+        border-top: solid 4px;
         
         
         @include media($breakpoint-desktop) {  
             padding: 3rem;    
         }
+        
+        &--one {
+            border-color: #d6df21;     
+        }
+                
+        &--two {
+            border-color: #24aae1;     
+        }
+                        
+        &--three {
+            border-color: #d91a5b;     
+        }
+                                
+        &--four {
+            border-color: #fcb821;     
+        }
+        
+        
     }
     
     &__tab {
@@ -157,6 +206,7 @@
             display: flex;
             align-items: stretch;
             margin-bottom: 3rem;
+            min-height: 23.5rem;
         }
     }
     
@@ -170,5 +220,29 @@
            @include font(2.4rem, 3.6rem);
         }
     }
+    
+    
+    &__close-mapy{
+            @include font(1.6rem, 1.6rem);
+            position: fixed;
+            display: none;
+            left: 50%;
+            top: 18.5rem;
+            transform: translate(-50%, 0);
+            color: $color-brand;
+            font-family: $font-bold;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 999;
+        
+    }
 
+    
+    
 }
+
+.ymaps-2-1-50-image {
+    visibility: hidden;
+} 

@@ -94,6 +94,8 @@
 		
 		&__tab-menu-item {
         font-family: $font-base;
+        white-space: nowrap;
+        
 				@include media($breakpoint-mobile) {
 						display: none;
 				}
