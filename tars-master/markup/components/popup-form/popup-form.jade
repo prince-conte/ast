@@ -1,0 +1,38 @@
+mixin popup-form()
+
+    // popupOpenFunction();  Открыть
+    // popupCloseFunction(); Закрыть
+    .popup-fade.js-popup-close
+    .popup-form.js-popup-block
+        .popup-form__box
+            h3.contact-form__sub-title Обратная связь
+
+            .input-block
+                input(placeholder="Имя")               
+            .input-block
+                input(placeholder="Телефон")
+
+            .input-block
+                input(placeholder="E-mail")               
+
+            .input-block
+                textarea(placeholder="Введите текст обращения")
+
+            .contact-form__button
+
+                a.in-contacts-button(href="#")
+                    img(src="static/img/general/infile.png" alt="button")
+                    .content
+                        span Прикрепить файл
+
+
+                a.in-contacts-button(href="#")
+                    img(src="static/img/general/in-mes.png" alt="button")
+                    .content
+                        span Отправить
+        
+        a.popup-form__close.js-popup-close(href="#")
+            span
+        
+
+    

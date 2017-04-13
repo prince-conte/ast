@@ -21,6 +21,7 @@
     &__image {
         position: relative;
         min-height: 1px;
+        overflow: hidden;
         
         @include media($breakpoint-desktop) {
             width: 33.3333%;
@@ -33,7 +34,54 @@
             min-height: 1px;
         }
         
+		&:hover {
+			.projects__one-image-bg {
+				transform: scale(1.2);
+			}			
+            
+            .projects__one-link-hover {
+				opacity: 1;
+			}
+		} 
     }
+    
+    &__one-link-hover {
+        @include size(100%);
+        @include display(flex);
+        @include justify-content(center);
+        @include align-items(center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: .2s;
+        
+        span {
+            @include font(1.8rem, 1.8rem);
+            font-family: $font-bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #d6df21;
+        }
+        
+    }
+    
+    
+    
+    &__one-image-bg {
+				@include size(100%);
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+				transition: .8s;
+        background: {
+            position: 50% 50%;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+    
     
 
     &__grid-title {

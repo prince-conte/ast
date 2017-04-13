@@ -1,0 +1,84 @@
+.popup-form {
+    position: fixed;
+    display: none;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 10001;
+    
+    @include media($breakpoint-desktop) {
+        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 44rem;
+        min-height: 25rem;
+        height: auto;
+    }
+    
+    &__box {
+        padding: 1rem;
+        
+        @include media($breakpoint-desktop) {
+            padding: 2rem;
+        }
+        
+    }
+    
+    &__close {
+        @include size(3.2rem);
+        position: absolute;
+        display: block;
+        top: -1rem;
+        right: 1rem;
+        
+        @include media($breakpoint-desktop) {
+            top: -5rem;
+            right: -5rem;
+        }
+        
+        span {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: 1.5rem;
+            background: $color-brand;
+            transform: rotate(45deg);
+        }
+             
+        span:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: $color-brand;
+            transform: rotate(-90deg);
+            content: '';
+        }
+        
+    }
+    
+}
+
+
+.popup-fade {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-base;
+    opacity: .6;
+    z-index: 10000;
+    
+    @include media($breakpoint-mobile) {
+        background: #fff;
+        opacity: 1;
+    }
+    
+    
+}

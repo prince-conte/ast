@@ -6,12 +6,33 @@ mixin shares()
             
             .projects__grid(href="#")
                 .projects__image
-                    img(src="static/img/general/shares1.jpg" alt="project")     
+                    img(src="static/img/general/shares1.jpg" alt="project")
+                    .projects__one-image-bg(style="background-image: url(static/img/general/shares1.jpg)")
+                    .projects__one-link-hover
+                        span Подробнее ›
+                    
                 .projects__content.projects__content--shares
                     h3.projects__content-title Буржуа - подарки молодоженам
                     p <b>С 25.02.2017 г. по 31.03.2017 г.</b> при покупке любого шампанского «Буржуа» в любом количестве, но не менее одной коробки, молодожены получат в подарок шесть бутылок шампанского «Буржуа Золотое».
                     
-                    +static-bar()
+                    .static-bar
+                    
+                        div
+
+                            .static-bar__item
+                                i.mdi.mdi-clock
+                                span 29/10/2016
+
+                            a.static-bar__item.cloud-download(href="#")
+                                i.mdi.mdi-cloud-download
+                                span Скачать
+
+                        .static-bar__item
+                            span Поделиться: 
+                            .static-bar__social
+                                a.mdi.mdi-vk(href="#")
+                                a.mdi.mdi-facebook(href="#")
+                                a.mdi.mdi-twitter(href="#")
                                         
             .projects__grid(href="#")
                 .projects__image

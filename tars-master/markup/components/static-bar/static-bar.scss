@@ -64,5 +64,11 @@
         border: 0;
     }
     
-
+    .cloud-download {
+        @include media($breakpoint-mobile) {
+            margin-top: 1rem;
+        }
+    }
+    
+    
 }
